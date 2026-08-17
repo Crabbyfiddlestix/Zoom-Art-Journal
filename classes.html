@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Classes | Zoom Art School</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cream: #f7f0df;
+    --paper: #fffaf0;
+    --black: #171717;
+    --red: #e85b45;
+    --yellow: #f2c84b;
+    --blue: #416b91;
+    --green: #71896d;
+    --pink: #d78c8b;
+
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+}
+
+body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: var(--sans);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1400px, calc(100% - 60px));
+    margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(247,240,223,.95);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(23,23,23,.18);
+}
+
+.header {
+    width: min(1400px, calc(100% - 60px));
+    min-height: 92px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-school {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: .22em;
+}
+
+.brand-journal {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: var(--serif);
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+.nav-button {
+    padding: 13px 18px;
+    background: var(--black);
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    padding: 110px 0 100px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr .75fr;
+    gap: 80px;
+    align-items: end;
+}
+
+.kicker {
+    margin-bottom: 25px;
+
+    color: var(--red);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: var(--serif);
+
+    font-size: clamp(70px, 9vw, 140px);
+
+    font-weight: 400;
+
+    line-height: .82;
+
+    letter-spacing: -.07em;
+}
+
+.hero h1 em {
+    color: var(--blue);
+}
+
+.hero-copy {
+    max-width: 470px;
+
+    color: #625d55;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* COLOUR BAR */
+
+.colour-bar {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    height: 15px;
+}
+
+.colour-bar div:nth-child(1) { background:var(--red); }
+.colour-bar div:nth-child(2) { background:var(--yellow); }
+.colour-bar div:nth-child(3) { background:var(--blue); }
+.colour-bar div:nth-child(4) { background:var(--green); }
+.colour-bar div:nth-child(5) { background:var(--pink); }
+.colour-bar div:nth-child(6) { background:var(--black); }
+
+
+/* PROGRAMS */
+
+.programs {
+    padding: 110px 0 130px;
+
+    background: #e9dfcf;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 50px;
+
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    font-weight: 400;
+
+    line-height: .87;
+
+    letter-spacing: -.06em;
+}
+
+.section-heading p {
+    max-width: 420px;
+
+    color: #625d55;
+
+    line-height: 1.7;
+}
+
+
+/* CLASS CARDS */
+
+.class-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 16px;
+}
+
+.class-card {
+    min-height: 520px;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--paper);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.class-card:nth-child(1) {
+    background: var(--red);
+}
+
+.class-card:nth-child(2) {
+    background: var(--yellow);
+}
+
+.class-card:nth-child(3) {
+    background: var(--blue);
+    color: white;
+}
+
+.class-number {
+    font-family: var(--serif);
+
+    font-size: 70px;
+
+    line-height: .7;
+
+    opacity: .45;
+}
+
+.class-card h3 {
+    margin-top: auto;
+
+    font-family: var(--serif);
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    letter-spacing: -.04em;
+}
+
+.class-card p {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    max-width: 330px;
+}
+
+.class-card-link {
+    margin-top: 30px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+/* EXPERIENCE */
+
+.experience {
+    padding: 130px 0;
+}
+
+.experience-grid {
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 100px;
+}
+
+.experience h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px,6vw,90px);
+
+    font-weight: 400;
+
+    line-height: .88;
+
+    letter-spacing: -.06em;
+}
+
+.experience-copy p {
+    color: #625d55;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.features {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+.feature {
+    padding: 28px;
+
+    background: var(--paper);
+
+    border-left: 5px solid var(--red);
+}
+
+.feature:nth-child(2) {
+    border-color: var(--yellow);
+}
+
+.feature:nth-child(3) {
+    border-color: var(--blue);
+}
+
+.feature:nth-child(4) {
+    border-color: var(--green);
+}
+
+.feature strong {
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+.feature span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #625d55;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* WHO */
+
+.who {
+    padding: 120px 0;
+
+    background: var(--black);
+
+    color: white;
+}
+
+.who-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.who h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(60px,7vw,105px);
+
+    font-weight: 400;
+
+    line-height: .85;
+
+    letter-spacing: -.06em;
+}
+
+.who h2 em {
+    color: var(--yellow);
+}
+
+.who-copy {
+    color: #c9c2b8;
+
+    line-height: 1.8;
+}
+
+.who-list {
+    margin-top: 30px;
+
+    display: grid;
+
+    gap: 10px;
+}
+
+.who-item {
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    font-size: 13px;
+}
+
+
+/* HOW IT WORKS */
+
+.how {
+    padding: 120px 0;
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 15px;
+
+    margin-top: 65px;
+}
+
+.step {
+    padding: 30px;
+
+    background: var(--paper);
+
+    min-height: 260px;
+}
+
+.step:nth-child(1) {
+    border-top: 6px solid var(--red);
+}
+
+.step:nth-child(2) {
+    border-top: 6px solid var(--yellow);
+}
+
+.step:nth-child(3) {
+    border-top: 6px solid var(--blue);
+}
+
+.step:nth-child(4) {
+    border-top: 6px solid var(--green);
+}
+
+.step-number {
+    font-family: var(--serif);
+
+    font-size: 55px;
+}
+
+.step h3 {
+    margin-top: 25px;
+
+    font-family: var(--serif);
+
+    font-size: 28px;
+
+    font-weight: 400;
+}
+
+.step p {
+    margin-top: 10px;
+
+    color: #625d55;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* FREE TRIAL */
+
+.trial {
+    padding: 130px 0;
+
+    background: var(--yellow);
+
+    text-align: center;
+}
+
+.trial h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(65px,8vw,120px);
+
+    font-weight: 400;
+
+    line-height: .83;
+
+    letter-spacing: -.07em;
+}
+
+.trial p {
+    max-width: 550px;
+
+    margin: 30px auto 0;
+
+    color: #514b42;
+
+    line-height: 1.7;
+}
+
+.trial-button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 18px 27px;
+
+    background: var(--black);
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+.trial-button:hover {
+    background: var(--red);
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 65px 0;
+
+    background: var(--black);
+
+    color: white;
+}
+
+.footer {
+    width: min(1400px, calc(100% - 60px));
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer strong {
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: .18em;
+}
+
+.footer span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: var(--serif);
+
+    font-size: 22px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: var(--yellow);
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+    nav a:not(.nav-button) {
+        display: none;
+    }
+
+    .hero-grid,
+    .experience-grid,
+    .who-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .class-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:560px) {
+
+    .container,
+    .header,
+    .footer {
+        width: calc(100% - 30px);
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .hero-grid {
+        display: block;
+    }
+
+    .hero-copy {
+        margin-top: 35px;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading p {
+        margin-top: 25px;
+    }
+
+    .features,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header">
+
+<a href="index.html">
+
+<span class="brand-school">
+ZOOM ART SCHOOL
+</span>
+
+<span class="brand-journal">
+The Art Journal
+</span>
+
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="journal.html">Journal</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="instructors.html">Mahesh & Maitri</a>
+
+<a href="classes.html" style="color:#e85b45;">Classes</a>
+
+<a href="exhibitions/latest.html">Exhibition</a>
+
+<a href="classes.html" class="nav-button">
+Book a Free Trial
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div>
+
+<div class="kicker">
+Zoom Art School · Classes
+</div>
+
+<h1>
+Learn.<br>
+Make.<br>
+<em>Imagine.</em>
+</h1>
+
+</div>
+
+<div class="hero-copy">
+
+<p>
+
+Art classes should feel like a place
+where you want to be.
+
+A place to experiment, learn,
+make mistakes and discover
+something new.
+
+</p>
+
+<p style="margin-top:25px;">
+
+At Zoom Art School, Mahesh and Maitri
+create that kind of space for students
+through engaging, practical art classes.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<div class="colour-bar">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+
+
+<!-- PROGRAMS -->
+
+<section class="programs">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div>
+
+<div class="kicker">
+What We Explore
+</div>
+
+<h2>
+Different ways<br>
+to make art.
+</h2>
+
+</div>
+
+<p>
+
+Our classes encourage students to explore
+different materials, techniques and ways
+of seeing — while building the fundamentals
+that make creativity stronger.
+
+</p>
+
+</div>
+
+
+
+<div class="class-grid">
+
+
+<div class="class-card">
+
+<div class="class-number">
+01
+</div>
+
+<div>
+
+<h3>
+Drawing
+</h3>
+
+<p>
+Observation, proportion, line, form,
+shading and the foundations of drawing.
+</p>
+
+<div class="class-card-link">
+Explore Drawing →
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="class-card">
+
+<div class="class-number">
+02
+</div>
+
+<div>
+
+<h3>
+Painting
+</h3>
+
+<p>
+Colour, composition, brushwork and
+the joy of turning ideas into images.
+</p>
+
+<div class="class-card-link">
+Explore Painting →
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="class-card">
+
+<div class="class-number">
+03
+</div>
+
+<div>
+
+<h3>
+Creative Projects
+</h3>
+
+<p>
+Projects that encourage imagination,
+experimentation and individual expression.
+</p>
+
+<div class="class-card-link">
+Explore Projects →
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience">
+
+<div class="container">
+
+<div class="experience-grid">
+
+<div>
+
+<div class="kicker">
+The Learning Experience
+</div>
+
+<h2>
+More than<br>
+a drawing<br>
+class.
+</h2>
+
+</div>
+
+
+<div class="experience-copy">
+
+<p>
+
+Learning art isn't simply about copying
+what an instructor does.
+
+It's about learning to observe,
+understand and eventually make
+your own decisions as an artist.
+
+</p>
+
+<p>
+
+That's why Zoom Art School combines
+technical foundations with creativity,
+experimentation and encouragement.
+
+</p>
+
+
+<div class="features">
+
+<div class="feature">
+
+<strong>
+Learn the basics
+</strong>
+
+<span>
+Build strong artistic foundations
+step by step.
+</span>
+
+</div>
+
+
+<div class="feature">
+
+<strong>
+Ask questions
+</strong>
+
+<span>
+Understand the why behind
+the technique.
+</span>
+
+</div>
+
+
+<div class="feature">
+
+<strong>
+Experiment
+</strong>
+
+<span>
+Try different approaches without
+being afraid of mistakes.
+</span>
+
+</div>
+
+
+<div class="feature">
+
+<strong>
+Find your style
+</strong>
+
+<span>
+Develop confidence in your
+own creative voice.
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- WHO IS IT FOR -->
+
+<section class="who">
+
+<div class="container">
+
+<div class="who-grid">
+
+<div>
+
+<div class="kicker" style="color:#f2c84b;">
+Who Is It For?
+</div>
+
+<h2>
+For curious<br>
+people who<br>
+want to <em>create.</em>
+</h2>
+
+</div>
+
+
+<div class="who-copy">
+
+<p>
+
+Whether you're picking up a pencil
+for the first time or already love
+creating art, the classes are designed
+to meet students where they are.
+
+</p>
+
+<div class="who-list">
+
+<div class="who-item">
+Children discovering their creativity
+</div>
+
+<div class="who-item">
+Students building artistic skills
+</div>
+
+<div class="who-item">
+Adults returning to art
+</div>
+
+<div class="who-item">
+Anyone who simply wants to learn
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- HOW IT WORKS -->
+
+<section class="how">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div>
+
+<div class="kicker">
+Getting Started
+</div>
+
+<h2>
+Four simple<br>
+steps.
+</h2>
+
+</div>
+
+<p>
+
+No complicated process.
+Just come along, meet the instructors,
+and start creating.
+
+</p>
+
+</div>
+
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+01
+</div>
+
+<h3>
+Book a trial
+</h3>
+
+<p>
+Choose a convenient time and
+reserve your free trial class.
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+02
+</div>
+
+<h3>
+Meet Mahesh & Maitri
+</h3>
+
+<p>
+Get to know the instructors and
+understand how the classes work.
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+03
+</div>
+
+<h3>
+Make something
+</h3>
+
+<p>
+Pick up your materials and
+experience the class for yourself.
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+04
+</div>
+
+<h3>
+Keep creating
+</h3>
+
+<p>
+If you love it, continue learning
+and growing with Zoom Art School.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TRIAL -->
+
+<section class="trial">
+
+<div class="container">
+
+<h2>
+Your first<br>
+masterpiece<br>
+starts here.
+</h2>
+
+<p>
+
+Not sure if an art class is right for you?
+
+Come try one.
+
+Experience Zoom Art School,
+meet Mahesh and Maitri,
+and see where your creativity takes you.
+
+</p>
+
+<a href="#" class="trial-button">
+Book a Free Trial →
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer">
+
+<div>
+
+<strong>
+ZOOM ART SCHOOL
+</strong>
+
+<span>
+The Art Journal
+</span>
+
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="journal.html">Journal</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="instructors.html">Mahesh & Maitri</a>
+
+<a href="classes.html">Classes</a>
+
+<a href="exhibitions/latest.html">Exhibition</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
