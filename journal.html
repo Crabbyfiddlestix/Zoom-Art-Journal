@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Art Journal | Zoom Art School</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cream: #f7f0df;
+    --paper: #fffaf0;
+    --black: #171717;
+    --red: #e85b45;
+    --yellow: #f2c84b;
+    --blue: #416b91;
+    --green: #71896d;
+    --pink: #d78c8b;
+    --brown: #9b8065;
+
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+}
+
+body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: var(--sans);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(247,240,223,.95);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(23,23,23,.18);
+}
+
+.header {
+    width: min(1400px, calc(100% - 60px));
+    min-height: 92px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    line-height: 1;
+}
+
+.brand-school {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .22em;
+}
+
+.brand-journal {
+    display: block;
+    margin-top: 8px;
+    font-family: var(--serif);
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+.nav-button {
+    padding: 13px 18px;
+    background: var(--black);
+    color: white;
+}
+
+.nav-button:hover {
+    background: var(--red);
+    color: white;
+}
+
+
+/* =========================
+   JOURNAL MASTHEAD
+========================= */
+
+.masthead {
+    padding: 100px 0 85px;
+
+    border-bottom: 1px solid rgba(23,23,23,.18);
+}
+
+.container {
+    width: min(1400px, calc(100% - 60px));
+    margin: auto;
+}
+
+.masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+}
+
+.issue {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.masthead h1 {
+    margin-top: 22px;
+
+    font-family: var(--serif);
+    font-size: clamp(80px, 12vw, 180px);
+    font-weight: 400;
+
+    line-height: .78;
+    letter-spacing: -.07em;
+}
+
+.masthead h1 span {
+    color: var(--red);
+}
+
+.masthead-note {
+    max-width: 330px;
+
+    font-size: 15px;
+    line-height: 1.7;
+    color: #625d55;
+}
+
+
+/* =========================
+   COLOUR STRIP
+========================= */
+
+.colour-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 18px;
+}
+
+.colour-strip div:nth-child(1) {
+    background: var(--red);
+}
+
+.colour-strip div:nth-child(2) {
+    background: var(--yellow);
+}
+
+.colour-strip div:nth-child(3) {
+    background: var(--blue);
+}
+
+.colour-strip div:nth-child(4) {
+    background: var(--green);
+}
+
+.colour-strip div:nth-child(5) {
+    background: var(--pink);
+}
+
+
+/* =========================
+   FEATURED STORY
+========================= */
+
+.featured {
+    padding: 110px 0;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.feature-image {
+    min-height: 620px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: var(--blue);
+}
+
+.feature-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 470px;
+    height: 470px;
+
+    border-radius: 50%;
+
+    background: var(--yellow);
+
+    left: 7%;
+    top: 8%;
+}
+
+.feature-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 570px;
+
+    background: var(--red);
+
+    right: 13%;
+    top: -10%;
+
+    transform: rotate(27deg);
+}
+
+.feature-note {
+    position: absolute;
+
+    left: 28px;
+    bottom: 28px;
+
+    z-index: 2;
+
+    background: white;
+    padding: 12px 15px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.story-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    margin-bottom: 22px;
+}
+
+.feature-copy h2 {
+    font-family: var(--serif);
+    font-size: clamp(55px, 6vw, 90px);
+    font-weight: 400;
+
+    line-height: .88;
+    letter-spacing: -.055em;
+}
+
+.feature-copy h2 em {
+    color: var(--red);
+}
+
+.feature-copy p {
+    margin-top: 28px;
+
+    color: #625d55;
+
+    line-height: 1.8;
+}
+
+.read-more {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid var(--black);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.read-more:hover {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+
+/* =========================
+   STORIES
+========================= */
+
+.stories {
+    padding: 110px 0;
+
+    background: #e9dfcf;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 40px;
+
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-family: var(--serif);
+    font-size: clamp(55px, 7vw, 100px);
+    font-weight: 400;
+
+    line-height: .87;
+    letter-spacing: -.06em;
+}
+
+.section-heading p {
+    max-width: 400px;
+
+    color: #625d55;
+    line-height: 1.7;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.story-card {
+    background: var(--paper);
+}
+
+.story-image {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-card:nth-child(1) .story-image {
+    background: var(--yellow);
+}
+
+.story-card:nth-child(2) .story-image {
+    background: var(--pink);
+}
+
+.story-card:nth-child(3) .story-image {
+    background: var(--green);
+}
+
+.story-card:nth-child(4) .story-image {
+    background: var(--red);
+}
+
+.story-card:nth-child(5) .story-image {
+    background: var(--blue);
+}
+
+.story-card:nth-child(6) .story-image {
+    background: var(--brown);
+}
+
+
+/* abstract artwork inside cards */
+
+.circle {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.75);
+
+    left: 20%;
+    top: 18%;
+}
+
+.rectangle {
+    position: absolute;
+
+    width: 120px;
+    height: 270px;
+
+    background: rgba(23,23,23,.85);
+
+    left: 42%;
+    top: 8%;
+
+    transform: rotate(20deg);
+}
+
+.arc {
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border: 40px solid rgba(255,255,255,.75);
+
+    border-radius: 50%;
+
+    right: -30px;
+    bottom: -40px;
+}
+
+.card-content {
+    padding: 25px 25px 30px;
+}
+
+.card-category {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    color: var(--red);
+}
+
+.card-content h3 {
+    margin-top: 12px;
+
+    font-family: var(--serif);
+    font-size: 31px;
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+.card-content p {
+    margin-top: 13px;
+
+    font-size: 13px;
+    line-height: 1.7;
+    color: #625d55;
+}
+
+
+/* =========================
+   EDITORIAL QUOTE
+========================= */
+
+.quote {
+    padding: 140px 0;
+
+    background: var(--black);
+    color: white;
+
+    text-align: center;
+}
+
+.quote-inner {
+    width: min(1000px, calc(100% - 60px));
+    margin: auto;
+}
+
+.quote-mark {
+    font-family: var(--serif);
+    font-size: 90px;
+    color: var(--yellow);
+    line-height: .5;
+}
+
+.quote blockquote {
+    margin-top: 30px;
+
+    font-family: var(--serif);
+    font-size: clamp(42px, 5vw, 72px);
+    font-weight: 400;
+
+    line-height: 1.05;
+    letter-spacing: -.04em;
+}
+
+.quote cite {
+    display: block;
+
+    margin-top: 30px;
+
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    color: #c9c2b8;
+}
+
+
+/* =========================
+   EXHIBITION
+========================= */
+
+.exhibition {
+    padding: 110px 0;
+}
+
+.exhibition-grid {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.exhibition-copy h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 6vw, 90px);
+
+    font-weight: 400;
+
+    line-height: .88;
+    letter-spacing: -.055em;
+}
+
+.exhibition-copy p {
+    margin-top: 25px;
+
+    max-width: 500px;
+
+    color: #625d55;
+    line-height: 1.8;
+}
+
+.exhibition-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 16px 22px;
+
+    background: var(--red);
+    color: white;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.exhibition-button:hover {
+    background: var(--black);
+}
+
+.exhibition-art {
+    min-height: 520px;
+
+    position: relative;
+
+    background: var(--yellow);
+
+    overflow: hidden;
+}
+
+.exhibition-art::before {
+    content: "";
+
+    position: absolute;
+
+    width: 440px;
+    height: 440px;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    left: 8%;
+    top: 12%;
+}
+
+.exhibition-art::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 600px;
+
+    background: var(--blue);
+
+    right: 15%;
+    top: -15%;
+
+    transform: rotate(25deg);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 65px 0;
+
+    background: var(--black);
+    color: white;
+}
+
+.footer {
+    width: min(1400px, calc(100% - 60px));
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer strong {
+    display: block;
+
+    font-size: 12px;
+    letter-spacing: .18em;
+}
+
+.footer span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: var(--serif);
+    font-size: 22px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: var(--yellow);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px) {
+
+    nav a:not(.nav-button) {
+        display: none;
+    }
+
+    .featured-grid,
+    .exhibition-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .featured {
+        padding: 80px 0;
+    }
+
+    .feature-image {
+        min-height: 450px;
+    }
+}
+
+@media(max-width:560px) {
+
+    .header,
+    .container,
+    .footer {
+        width: calc(100% - 30px);
+    }
+
+    .masthead {
+        padding: 75px 0;
+    }
+
+    .masthead-top,
+    .section-heading {
+        display: block;
+    }
+
+    .masthead-note,
+    .section-heading p {
+        margin-top: 25px;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header">
+
+<a href="index.html" class="brand">
+
+<span class="brand-school">
+ZOOM ART SCHOOL
+</span>
+
+<span class="brand-journal">
+The Art Journal
+</span>
+
+</a>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="instructors.html">Mahesh & Maitri</a>
+
+<a href="classes.html">Classes</a>
+
+<a href="exhibitions/latest.html">Exhibition</a>
+
+<a href="classes.html" class="nav-button">
+Book a Free Trial
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- JOURNAL MASTHEAD -->
+
+<section class="masthead">
+
+<div class="container">
+
+<div class="masthead-top">
+
+<div>
+
+<div class="issue">
+ZOOM ART SCHOOL · THE CREATIVE JOURNAL
+</div>
+
+<h1>
+The Art<br>
+<span>Journal.</span>
+</h1>
+
+</div>
+
+
+<div class="masthead-note">
+
+A place for stories, student artwork,
+creative ideas, teaching moments and
+the people who make Zoom Art School
+what it is.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="colour-strip">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+
+
+<!-- FEATURED STORY -->
+
+<section class="featured">
+
+<div class="container">
+
+<div class="featured-grid">
+
+
+<div class="feature-image">
+
+<div class="feature-note">
+Featured Story · From the Exhibition
+</div>
+
+</div>
+
+
+<div class="feature-copy">
+
+<div class="story-label">
+Featured Story
+</div>
+
+<h2>
+When the<br>
+classroom<br>
+becomes <em>an<br>
+exhibition.</em>
+</h2>
+
+<p>
+What happens when weeks, months and
+years of learning finally come together
+in one room?
+</p>
+
+<p>
+Take a look behind the latest Zoom Art
+School exhibition — the students,
+the artwork, the preparation and the
+moments that made it special.
+</p>
+
+<a href="exhibitions/latest.html"
+class="read-more">
+Read the Story →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STORIES -->
+
+<section class="stories">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div>
+
+<div class="story-label">
+From the Journal
+</div>
+
+<h2>
+Stories worth<br>
+sharing.
+</h2>
+
+</div>
+
+
+<p>
+The Art Journal will grow with the school —
+one student, one drawing, one idea and
+one creative discovery at a time.
+</p>
+
+</div>
+
+
+
+<div class="story-grid">
+
+
+<!-- CARD 1 -->
+
+<article class="story-card">
+
+<div class="story-image">
+
+<div class="circle"></div>
+
+<div class="rectangle"></div>
+
+</div>
+
+<div class="card-content">
+
+<div class="card-category">
+Student Stories
+</div>
+
+<h3>
+Every Drawing Has a Story
+</h3>
+
+<p>
+Behind every finished artwork is a journey
+of observation, practice and discovery.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- CARD 2 -->
+
+<article class="story-card">
+
+<div class="story-image">
+
+<div class="arc"></div>
+
+<div class="rectangle"></div>
+
+</div>
+
+<div class="card-content">
+
+<div class="card-category">
+Art & Technique
+</div>
+
+<h3>
+Learning to Really Look
+</h3>
+
+<p>
+Why observation is one of the most important
+skills an artist can develop.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- CARD 3 -->
+
+<article class="story-card">
+
+<div class="story-image">
+
+<div class="circle"></div>
+
+</div>
+
+<div class="card-content">
+
+<div class="card-category">
+Inside the Studio
+</div>
+
+<h3>
+What Happens in an Art Class?
+</h3>
+
+<p>
+A glimpse into the energy, questions,
+experiments and discoveries of a class.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- CARD 4 -->
+
+<article class="story-card">
+
+<div class="story-image">
+
+<div class="rectangle"></div>
+
+<div class="circle"></div>
+
+</div>
+
+<div class="card-content">
+
+<div class="card-category">
+Creative Practice
+</div>
+
+<h3>
+The Joy of Making
+</h3>
+
+<p>
+Sometimes the best reason to make art
+is simply because you want to.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- CARD 5 -->
+
+<article class="story-card">
+
+<div class="story-image">
+
+<div class="arc"></div>
+
+<div class="circle"></div>
+
+</div>
+
+<div class="card-content">
+
+<div class="card-category">
+Teacher's Desk
+</div>
+
+<h3>
+A Note from Mahesh & Maitri
+</h3>
+
+<p>
+Thoughts from the people behind
+Zoom Art School.
+</p>
+
+<a href="instructors.html" class="read-more">
+Meet the Teachers →
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- CARD 6 -->
+
+<article class="story-card">
+
+<div class="story-image">
+
+<div class="rectangle"></div>
+
+<div class="arc"></div>
+
+</div>
+
+<div class="card-content">
+
+<div class="card-category">
+Inspiration
+</div>
+
+<h3>
+Why We Keep Creating
+</h3>
+
+<p>
+A little reminder that creativity isn't
+about getting everything right.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+<div class="quote-inner">
+
+<div class="quote-mark">
+“
+</div>
+
+<blockquote>
+Art doesn't have to be perfect.
+It has to be yours.
+</blockquote>
+
+<cite>
+The Art Journal · Zoom Art School
+</cite>
+
+</div>
+
+</section>
+
+
+
+<!-- EXHIBITION -->
+
+<section class="exhibition">
+
+<div class="container">
+
+<div class="exhibition-grid">
+
+
+<div class="exhibition-copy">
+
+<div class="story-label">
+Don't Miss This
+</div>
+
+<h2>
+200+ moments<br>
+from our<br>
+latest exhibition.
+</h2>
+
+<p>
+Explore the latest Zoom Art School
+student exhibition through more than
+200 photographs of artwork, artists
+and memorable moments.
+</p>
+
+<a href="exhibitions/latest.html"
+class="exhibition-button">
+Enter the Exhibition →
+</a>
+
+</div>
+
+
+<div class="exhibition-art"></div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer">
+
+<div>
+
+<strong>
+ZOOM ART SCHOOL
+</strong>
+
+<span>
+The Art Journal
+</span>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="instructors.html">Mahesh & Maitri</a>
+
+<a href="classes.html">Classes</a>
+
+<a href="exhibitions/latest.html">Exhibition</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
