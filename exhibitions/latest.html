@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Latest Exhibition | Zoom Art School</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cream: #f7f0df;
+    --paper: #fffaf0;
+    --black: #171717;
+    --red: #e85b45;
+    --yellow: #f2c84b;
+    --blue: #416b91;
+    --green: #71896d;
+    --pink: #d78c8b;
+
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+}
+
+body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: var(--sans);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(247,240,223,.95);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(23,23,23,.18);
+}
+
+.header {
+    width: min(1400px, calc(100% - 60px));
+    min-height: 92px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    line-height: 1;
+}
+
+.brand-school {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: .22em;
+}
+
+.brand-journal {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: var(--serif);
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+.nav-button {
+    padding: 13px 18px;
+
+    background: var(--black);
+    color: white;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--black);
+    color: white;
+}
+
+.hero-copy {
+    padding: 100px 8vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kicker {
+    margin-bottom: 25px;
+
+    color: var(--yellow);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: var(--serif);
+
+    font-size: clamp(65px, 8vw, 125px);
+
+    font-weight: 400;
+
+    line-height: .84;
+    letter-spacing: -.06em;
+}
+
+.hero h1 em {
+    color: var(--red);
+}
+
+.hero-description {
+    max-width: 560px;
+
+    margin-top: 35px;
+
+    color: #d8d1c7;
+
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.hero-meta {
+    display: flex;
+    gap: 45px;
+
+    margin-top: 40px;
+}
+
+.meta strong {
+    display: block;
+
+    font-size: 26px;
+    font-family: var(--serif);
+    font-weight: 400;
+}
+
+.meta span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #aaa39a;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   HERO ART
+===================================================== */
+
+.hero-art {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--yellow);
+}
+
+.hero-art::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    left: 5%;
+    top: 12%;
+}
+
+.hero-art::after {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 750px;
+
+    background: var(--blue);
+
+    right: 12%;
+    top: -15%;
+
+    transform: rotate(25deg);
+}
+
+.art-green {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    right: 7%;
+    bottom: 10%;
+
+    z-index: 2;
+}
+
+.art-white {
+    position: absolute;
+
+    width: 55%;
+    height: 24px;
+
+    background: white;
+
+    left: 12%;
+    bottom: 23%;
+
+    z-index: 3;
+
+    transform: rotate(-14deg);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+    padding: 90px 0 45px;
+}
+
+.container {
+    width: min(1400px, calc(100% - 60px));
+    margin: auto;
+}
+
+.intro-grid {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 50px;
+}
+
+.intro h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 400;
+
+    line-height: .88;
+    letter-spacing: -.06em;
+}
+
+.intro p {
+    max-width: 470px;
+
+    color: #625d55;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   PHOTO GALLERY
+===================================================== */
+
+.gallery-section {
+    padding: 60px 0 130px;
+}
+
+.gallery-toolbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    border-top: 1px solid rgba(23,23,23,.2);
+    border-bottom: 1px solid rgba(23,23,23,.2);
+
+    padding: 17px 0;
+}
+
+.gallery-toolbar strong {
+    font-size: 11px;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+.gallery-toolbar span {
+    color: #625d55;
+
+    font-size: 12px;
+}
+
+
+/*
+   THESE ARE TEMPORARY ARTWORK PLACEHOLDERS.
+
+   When the real photographs are added,
+   these become actual image cards.
+*/
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    grid-auto-rows: 230px;
+
+    gap: 12px;
+}
+
+.photo {
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.photo:nth-child(1) {
+    background: var(--blue);
+    grid-row: span 2;
+}
+
+.photo:nth-child(2) {
+    background: var(--yellow);
+}
+
+.photo:nth-child(3) {
+    background: var(--pink);
+}
+
+.photo:nth-child(4) {
+    background: var(--green);
+}
+
+.photo:nth-child(5) {
+    background: var(--red);
+    grid-column: span 2;
+}
+
+.photo:nth-child(6) {
+    background: #b8a48b;
+}
+
+.photo:nth-child(7) {
+    background: #78899b;
+}
+
+.photo:nth-child(8) {
+    background: #d4bd73;
+}
+
+.photo:nth-child(9) {
+    background: #8b7771;
+    grid-row: span 2;
+}
+
+.photo:nth-child(10) {
+    background: #8b9c7a;
+}
+
+.photo:nth-child(11) {
+    background: #d76752;
+}
+
+.photo:nth-child(12) {
+    background: #50769a;
+    grid-column: span 2;
+}
+
+
+/* abstract placeholder artwork */
+
+.photo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 65%;
+    height: 65%;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.58);
+
+    left: 17%;
+    top: 17%;
+}
+
+.photo::after {
+    content: "";
+
+    position: absolute;
+
+    width: 32%;
+    height: 90%;
+
+    background: rgba(23,23,23,.7);
+
+    left: 40%;
+    top: 5%;
+
+    transform: rotate(17deg);
+}
+
+.photo:hover::before {
+    transform: scale(1.1);
+}
+
+.photo-number {
+    position: absolute;
+
+    z-index: 5;
+
+    left: 14px;
+    bottom: 12px;
+
+    background: white;
+
+    padding: 6px 9px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+}
+
+
+/* =====================================================
+   PHOTO NOTE
+===================================================== */
+
+.photo-note {
+    margin-top: 40px;
+
+    padding: 25px;
+
+    background: var(--paper);
+
+    border-left: 5px solid var(--red);
+
+    color: #625d55;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   DOWNLOAD CTA
+===================================================== */
+
+.download {
+    padding: 100px 0;
+
+    background: var(--red);
+
+    color: white;
+
+    text-align: center;
+}
+
+.download h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 400;
+
+    line-height: .88;
+    letter-spacing: -.06em;
+}
+
+.download p {
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    line-height: 1.7;
+}
+
+.download-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 16px 24px;
+
+    background: white;
+    color: var(--black);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+.download-button:hover {
+    background: var(--black);
+    color: white;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 65px 0;
+
+    background: var(--black);
+
+    color: white;
+}
+
+.footer {
+    width: min(1400px, calc(100% - 60px));
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer strong {
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: .18em;
+}
+
+.footer span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: var(--serif);
+
+    font-size: 22px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: var(--yellow);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px) {
+
+    nav a:not(.nav-button) {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+        padding: 80px 30px;
+    }
+
+    .hero-art {
+        min-height: 450px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:560px) {
+
+    .header,
+    .container,
+    .footer {
+        width: calc(100% - 30px);
+    }
+
+    .hero h1 {
+        font-size: 68px;
+    }
+
+    .hero-meta {
+        gap: 25px;
+    }
+
+    .intro-grid {
+        display: block;
+    }
+
+    .intro p {
+        margin-top: 25px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 260px;
+    }
+
+    .photo:nth-child(1),
+    .photo:nth-child(9) {
+        grid-row: span 1;
+    }
+
+    .photo:nth-child(5),
+    .photo:nth-child(12) {
+        grid-column: span 1;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="header">
+
+<a href="../index.html" class="brand">
+
+<span class="brand-school">
+ZOOM ART SCHOOL
+</span>
+
+<span class="brand-journal">
+The Art Journal
+</span>
+
+</a>
+
+
+<nav>
+
+<a href="../index.html">Home</a>
+
+<a href="../journal.html">Journal</a>
+
+<a href="../gallery.html">Gallery</a>
+
+<a href="../instructors.html">Mahesh & Maitri</a>
+
+<a href="../classes.html">Classes</a>
+
+<a href="latest.html" style="color:#e85b45;">
+Exhibition
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+<div class="hero-copy">
+
+<div class="kicker">
+Zoom Art School · Student Exhibition
+</div>
+
+
+<h1>
+A room<br>
+full of<br>
+<em>imagination.</em>
+</h1>
+
+
+<p class="hero-description">
+
+Welcome to the latest Zoom Art School
+student exhibition — a celebration of
+the artwork, ideas, patience and
+imagination of our students.
+
+</p>
+
+
+<div class="hero-meta">
+
+<div class="meta">
+
+<strong>200+</strong>
+
+<span>
+Photographs
+</span>
+
+</div>
+
+
+<div class="meta">
+
+<strong>∞</strong>
+
+<span>
+Ideas
+</span>
+
+</div>
+
+
+<div class="meta">
+
+<strong>1</strong>
+
+<span>
+Celebration
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-art">
+
+<div class="art-green"></div>
+
+<div class="art-white"></div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+<div class="container">
+
+<div class="intro-grid">
+
+
+<div>
+
+<div class="kicker">
+The Exhibition
+</div>
+
+<h2>
+Made with<br>
+patience.
+</h2>
+
+</div>
+
+
+<p>
+
+An exhibition is more than a collection
+of finished drawings. It is the result of
+hours of looking, practising, making,
+changing, starting again and finally
+saying:
+
+<strong>
+"I'm ready to show this."
+</strong>
+
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery-section">
+
+<div class="container">
+
+
+<div class="gallery-toolbar">
+
+<strong>
+Exhibition Collection
+</strong>
+
+<span>
+200+ photographs · Click an image to enlarge
+</span>
+
+</div>
+
+
+
+<div class="gallery-grid">
+
+
+<div class="photo">
+
+<span class="photo-number">
+001
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+002
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+003
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+004
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+005
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+006
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+007
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+008
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+009
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+010
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+011
+</span>
+
+</div>
+
+
+<div class="photo">
+
+<span class="photo-number">
+012
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="photo-note">
+
+<strong>
+Coming next:
+</strong>
+
+The colourful placeholders above will be replaced
+with the actual exhibition photographs. Once the
+images are uploaded, visitors will be able to open
+each photograph at full size and download it.
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DOWNLOAD CTA
+===================================================== -->
+
+<section class="download">
+
+<div class="container">
+
+<h2>
+Take a piece<br>
+of the exhibition<br>
+with you.
+</h2>
+
+
+<p>
+
+The exhibition collection will include
+high-resolution photographs that visitors
+can view and download.
+
+</p>
+
+
+<a href="#"
+class="download-button">
+Exhibition Downloads Coming Soon
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer">
+
+
+<div>
+
+<strong>
+ZOOM ART SCHOOL
+</strong>
+
+<span>
+The Art Journal
+</span>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="../index.html">
+Home
+</a>
+
+<a href="../journal.html">
+Journal
+</a>
+
+<a href="../gallery.html">
+Gallery
+</a>
+
+<a href="../instructors.html">
+Mahesh & Maitri
+</a>
+
+<a href="../classes.html">
+Classes
+</a>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
