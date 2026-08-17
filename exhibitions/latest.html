@@ -7,7 +7,7 @@
 <title>Latest Exhibition | Zoom Art School</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
@@ -44,10 +44,15 @@ a {
     text-decoration: none;
 }
 
+.container {
+    width: min(1400px, calc(100% - 60px));
+    margin: auto;
+}
 
-/* =====================================================
+
+/* =========================
    HEADER
-===================================================== */
+========================= */
 
 header {
     position: sticky;
@@ -68,10 +73,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.brand {
-    line-height: 1;
 }
 
 .brand-school {
@@ -115,26 +116,31 @@ nav a:hover {
 }
 
 
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero {
-    min-height: 650px;
+    min-height: 700px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding: 100px 0;
 
-    background: var(--black);
+    background: var(--blue);
+
     color: white;
-}
-
-.hero-copy {
-    padding: 100px 8vw;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns: 1fr .8fr;
+
+    gap: 90px;
+
+    align-items: center;
 }
 
 .kicker {
@@ -152,69 +158,70 @@ nav a:hover {
 .hero h1 {
     font-family: var(--serif);
 
-    font-size: clamp(65px, 8vw, 125px);
+    font-size: clamp(75px, 10vw, 150px);
 
     font-weight: 400;
 
-    line-height: .84;
-    letter-spacing: -.06em;
+    line-height: .78;
+
+    letter-spacing: -.07em;
 }
 
 .hero h1 em {
-    color: var(--red);
+    color: var(--yellow);
 }
 
-.hero-description {
-    max-width: 560px;
+.hero-copy {
+    max-width: 500px;
 
-    margin-top: 35px;
-
-    color: #d8d1c7;
+    color: #e4e8ec;
 
     font-size: 17px;
-    line-height: 1.75;
+
+    line-height: 1.8;
 }
 
-.hero-meta {
-    display: flex;
-    gap: 45px;
-
-    margin-top: 40px;
+.hero-copy strong {
+    color: white;
 }
 
-.meta strong {
-    display: block;
+.hero-button {
+    display: inline-block;
 
-    font-size: 26px;
-    font-family: var(--serif);
-    font-weight: 400;
-}
+    margin-top: 30px;
 
-.meta span {
-    display: block;
+    padding: 17px 23px;
 
-    margin-top: 4px;
+    background: var(--yellow);
 
-    color: #aaa39a;
+    color: var(--black);
 
-    font-size: 9px;
+    font-size: 10px;
+
     font-weight: 700;
 
     letter-spacing: .12em;
+
     text-transform: uppercase;
 }
 
+.hero-button:hover {
+    background: white;
+}
 
-/* =====================================================
-   HERO ART
-===================================================== */
+
+/* =========================
+   ABSTRACT ART
+========================= */
 
 .hero-art {
+    height: 500px;
+
     position: relative;
 
-    overflow: hidden;
-
     background: var(--yellow);
+
+    overflow: hidden;
 }
 
 .hero-art::before {
@@ -222,15 +229,15 @@ nav a:hover {
 
     position: absolute;
 
-    width: 520px;
-    height: 520px;
+    width: 420px;
+    height: 420px;
 
     border-radius: 50%;
 
     background: var(--red);
 
-    left: 5%;
-    top: 12%;
+    left: -40px;
+    top: 60px;
 }
 
 .hero-art::after {
@@ -238,143 +245,190 @@ nav a:hover {
 
     position: absolute;
 
-    width: 230px;
-    height: 750px;
-
-    background: var(--blue);
-
-    right: 12%;
-    top: -15%;
-
-    transform: rotate(25deg);
-}
-
-.art-green {
-    position: absolute;
-
     width: 180px;
-    height: 180px;
-
-    border-radius: 50%;
+    height: 620px;
 
     background: var(--green);
 
-    right: 7%;
-    bottom: 10%;
+    right: 20%;
 
-    z-index: 2;
+    top: -70px;
+
+    transform: rotate(22deg);
 }
 
-.art-white {
+.art-shape {
     position: absolute;
 
-    width: 55%;
-    height: 24px;
+    width: 220px;
+    height: 220px;
 
-    background: white;
+    border-radius: 50%;
 
-    left: 12%;
-    bottom: 23%;
+    background: var(--paper);
+
+    right: 7%;
+    bottom: 8%;
 
     z-index: 3;
-
-    transform: rotate(-14deg);
 }
 
 
-/* =====================================================
+/* =========================
    INTRO
-===================================================== */
+========================= */
 
 .intro {
-    padding: 90px 0 45px;
-}
-
-.container {
-    width: min(1400px, calc(100% - 60px));
-    margin: auto;
+    padding: 110px 0 80px;
 }
 
 .intro-grid {
-    display: flex;
+    display: grid;
 
-    justify-content: space-between;
-    align-items: end;
+    grid-template-columns: .8fr 1.2fr;
 
-    gap: 50px;
+    gap: 100px;
 }
 
 .intro h2 {
     font-family: var(--serif);
 
-    font-size: clamp(55px, 7vw, 100px);
+    font-size: clamp(55px, 7vw, 95px);
 
     font-weight: 400;
 
-    line-height: .88;
+    line-height: .86;
+
     letter-spacing: -.06em;
 }
 
-.intro p {
-    max-width: 470px;
+.intro-copy {
+    max-width: 650px;
 
     color: #625d55;
 
-    line-height: 1.8;
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+.intro-copy p + p {
+    margin-top: 25px;
 }
 
 
-/* =====================================================
-   PHOTO GALLERY
-===================================================== */
+/* =========================
+   EXHIBITION STATS
+========================= */
 
-.gallery-section {
-    padding: 60px 0 130px;
+.stats {
+    padding: 50px 0 100px;
 }
 
-.gallery-toolbar {
-    display: flex;
+.stat-grid {
+    display: grid;
 
-    justify-content: space-between;
-    align-items: center;
+    grid-template-columns: repeat(4,1fr);
 
-    margin-bottom: 30px;
-
-    border-top: 1px solid rgba(23,23,23,.2);
-    border-bottom: 1px solid rgba(23,23,23,.2);
-
-    padding: 17px 0;
+    gap: 15px;
 }
 
-.gallery-toolbar strong {
+.stat {
+    padding: 35px;
+
+    background: var(--paper);
+
+    min-height: 180px;
+}
+
+.stat:nth-child(1) {
+    border-top: 6px solid var(--red);
+}
+
+.stat:nth-child(2) {
+    border-top: 6px solid var(--yellow);
+}
+
+.stat:nth-child(3) {
+    border-top: 6px solid var(--blue);
+}
+
+.stat:nth-child(4) {
+    border-top: 6px solid var(--green);
+}
+
+.stat-number {
+    font-family: var(--serif);
+
+    font-size: 55px;
+
+    line-height: .8;
+}
+
+.stat-label {
+    margin-top: 20px;
+
     font-size: 11px;
 
-    letter-spacing: .1em;
+    font-weight: 700;
+
+    letter-spacing: .12em;
 
     text-transform: uppercase;
 }
 
-.gallery-toolbar span {
+
+/* =========================
+   GALLERY PREVIEW
+========================= */
+
+.preview {
+    padding: 110px 0 130px;
+
+    background: #e9dfcf;
+}
+
+.preview-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 40px;
+
+    margin-bottom: 55px;
+}
+
+.preview-heading h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    font-weight: 400;
+
+    line-height: .87;
+
+    letter-spacing: -.06em;
+}
+
+.preview-heading p {
+    max-width: 400px;
+
     color: #625d55;
 
-    font-size: 12px;
+    line-height: 1.7;
 }
 
 
-/*
-   THESE ARE TEMPORARY ARTWORK PLACEHOLDERS.
+/* PHOTO GRID */
 
-   When the real photographs are added,
-   these become actual image cards.
-*/
-
-.gallery-grid {
+.photo-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 
-    grid-auto-rows: 230px;
+    grid-auto-rows: 240px;
 
     gap: 12px;
 }
@@ -384,184 +438,96 @@ nav a:hover {
 
     overflow: hidden;
 
-    cursor: pointer;
+    background: var(--paper);
 }
 
 .photo:nth-child(1) {
-    background: var(--blue);
+    grid-column: span 2;
     grid-row: span 2;
-}
-
-.photo:nth-child(2) {
-    background: var(--yellow);
-}
-
-.photo:nth-child(3) {
-    background: var(--pink);
 }
 
 .photo:nth-child(4) {
+    grid-column: span 2;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.photo:nth-child(1) .photo-placeholder {
+    background: var(--red);
+}
+
+.photo:nth-child(2) .photo-placeholder {
+    background: var(--yellow);
+}
+
+.photo:nth-child(3) .photo-placeholder {
     background: var(--green);
 }
 
-.photo:nth-child(5) {
-    background: var(--red);
-    grid-column: span 2;
+.photo:nth-child(4) .photo-placeholder {
+    background: var(--pink);
 }
 
-.photo:nth-child(6) {
-    background: #b8a48b;
+.photo:nth-child(5) .photo-placeholder {
+    background: var(--blue);
 }
 
-.photo:nth-child(7) {
-    background: #78899b;
-}
-
-.photo:nth-child(8) {
-    background: #d4bd73;
-}
-
-.photo:nth-child(9) {
-    background: #8b7771;
-    grid-row: span 2;
-}
-
-.photo:nth-child(10) {
-    background: #8b9c7a;
-}
-
-.photo:nth-child(11) {
-    background: #d76752;
-}
-
-.photo:nth-child(12) {
-    background: #50769a;
-    grid-column: span 2;
+.photo:nth-child(6) .photo-placeholder {
+    background: #b59c7c;
 }
 
 
-/* abstract placeholder artwork */
+/* abstract placeholders */
 
-.photo::before {
+.photo-placeholder::before {
     content: "";
 
     position: absolute;
 
-    width: 65%;
-    height: 65%;
+    width: 60%;
+    height: 60%;
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.58);
+    background: rgba(255,255,255,.65);
 
-    left: 17%;
-    top: 17%;
+    left: 20%;
+    top: 20%;
 }
 
-.photo::after {
+.photo-placeholder::after {
     content: "";
 
     position: absolute;
 
-    width: 32%;
-    height: 90%;
+    width: 28%;
+    height: 85%;
 
-    background: rgba(23,23,23,.7);
+    background: rgba(23,23,23,.65);
 
     left: 40%;
-    top: 5%;
+    top: 8%;
 
-    transform: rotate(17deg);
+    transform: rotate(18deg);
 }
 
-.photo:hover::before {
-    transform: scale(1.1);
-}
-
-.photo-number {
+.photo-caption {
     position: absolute;
 
-    z-index: 5;
+    left: 15px;
+    bottom: 15px;
 
-    left: 14px;
-    bottom: 12px;
+    padding: 8px 10px;
 
     background: white;
-
-    padding: 6px 9px;
 
     font-size: 9px;
-    font-weight: 700;
 
-    letter-spacing: .08em;
-}
-
-
-/* =====================================================
-   PHOTO NOTE
-===================================================== */
-
-.photo-note {
-    margin-top: 40px;
-
-    padding: 25px;
-
-    background: var(--paper);
-
-    border-left: 5px solid var(--red);
-
-    color: #625d55;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-
-/* =====================================================
-   DOWNLOAD CTA
-===================================================== */
-
-.download {
-    padding: 100px 0;
-
-    background: var(--red);
-
-    color: white;
-
-    text-align: center;
-}
-
-.download h2 {
-    font-family: var(--serif);
-
-    font-size: clamp(55px, 7vw, 100px);
-
-    font-weight: 400;
-
-    line-height: .88;
-    letter-spacing: -.06em;
-}
-
-.download p {
-    max-width: 600px;
-
-    margin: 25px auto 0;
-
-    line-height: 1.7;
-}
-
-.download-button {
-    display: inline-block;
-
-    margin-top: 30px;
-
-    padding: 16px 24px;
-
-    background: white;
-    color: var(--black);
-
-    font-size: 11px;
     font-weight: 700;
 
     letter-spacing: .08em;
@@ -569,15 +535,108 @@ nav a:hover {
     text-transform: uppercase;
 }
 
-.download-button:hover {
+
+/* =========================
+   FULL EXHIBITION BUTTON
+========================= */
+
+.exhibition-access {
+    margin-top: 45px;
+
+    padding: 40px;
+
     background: var(--black);
+
     color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.exhibition-access h3 {
+    font-family: var(--serif);
+
+    font-size: 38px;
+
+    font-weight: 400;
+}
+
+.exhibition-access p {
+    margin-top: 7px;
+
+    color: #bdb7ad;
+
+    font-size: 13px;
+}
+
+.access-button {
+    flex-shrink: 0;
+
+    padding: 16px 22px;
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+.access-button:hover {
+    background: white;
 }
 
 
-/* =====================================================
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+    padding: 130px 0;
+
+    text-align: center;
+}
+
+.closing h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(60px,8vw,120px);
+
+    font-weight: 400;
+
+    line-height: .84;
+
+    letter-spacing: -.07em;
+}
+
+.closing h2 em {
+    color: var(--red);
+}
+
+.closing p {
+    max-width: 600px;
+
+    margin: 30px auto 0;
+
+    color: #625d55;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 footer {
     padding: 65px 0;
@@ -589,9 +648,11 @@ footer {
 
 .footer {
     width: min(1400px, calc(100% - 60px));
+
     margin: auto;
 
     display: flex;
+
     justify-content: space-between;
 
     gap: 40px;
@@ -617,7 +678,10 @@ footer {
 
 .footer-links {
     display: flex;
+
     gap: 25px;
+
+    flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -629,9 +693,9 @@ footer {
 }
 
 
-/* =====================================================
+/* =========================
    MOBILE
-===================================================== */
+========================= */
 
 @media(max-width:900px) {
 
@@ -639,87 +703,86 @@ footer {
         display: none;
     }
 
-    .hero {
+    .hero-grid,
+    .intro-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero-copy {
-        padding: 80px 30px;
-    }
-
     .hero-art {
-        min-height: 450px;
+        height: 400px;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .stat-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .exhibition-access {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
 @media(max-width:560px) {
 
-    .header,
     .container,
+    .header,
     .footer {
         width: calc(100% - 30px);
     }
 
-    .hero h1 {
-        font-size: 68px;
+    .hero {
+        padding: 70px 0;
     }
 
-    .hero-meta {
-        gap: 25px;
+    .hero-art {
+        height: 300px;
     }
 
-    .intro-grid {
-        display: block;
-    }
-
-    .intro p {
-        margin-top: 25px;
-    }
-
-    .gallery-grid {
+    .stat-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 260px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 280px;
     }
 
     .photo:nth-child(1),
-    .photo:nth-child(9) {
+    .photo:nth-child(4) {
+        grid-column: span 1;
         grid-row: span 1;
     }
 
-    .photo:nth-child(5),
-    .photo:nth-child(12) {
-        grid-column: span 1;
+    .preview-heading {
+        display: block;
+    }
+
+    .preview-heading p {
+        margin-top: 25px;
     }
 
     .footer {
         flex-direction: column;
-    }
-
-    .footer-links {
-        flex-wrap: wrap;
     }
 }
 
 </style>
 </head>
 
-
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<!-- HEADER -->
 
 <header>
 
 <div class="header">
 
-<a href="../index.html" class="brand">
+<a href="../index.html">
 
 <span class="brand-school">
 ZOOM ART SCHOOL
@@ -730,7 +793,6 @@ The Art Journal
 </span>
 
 </a>
-
 
 <nav>
 
@@ -744,8 +806,10 @@ The Art Journal
 
 <a href="../classes.html">Classes</a>
 
-<a href="latest.html" style="color:#e85b45;">
-Exhibition
+<a href="latest.html" style="color:#e85b45;">Exhibition</a>
+
+<a href="../classes.html" class="nav-button">
+Book a Free Trial
 </a>
 
 </nav>
@@ -756,100 +820,78 @@ Exhibition
 
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
+<div class="container">
 
-<div class="hero-copy">
+<div class="hero-grid">
+
+<div>
 
 <div class="kicker">
 Zoom Art School · Student Exhibition
 </div>
 
-
 <h1>
-A room<br>
-full of<br>
-<em>imagination.</em>
+Look.<br>
+See.<br>
+<em>Celebrate.</em>
 </h1>
 
-
-<p class="hero-description">
-
-Welcome to the latest Zoom Art School
-student exhibition — a celebration of
-the artwork, ideas, patience and
-imagination of our students.
-
-</p>
-
-
-<div class="hero-meta">
-
-<div class="meta">
-
-<strong>200+</strong>
-
-<span>
-Photographs
-</span>
-
 </div>
 
 
-<div class="meta">
-
-<strong>∞</strong>
-
-<span>
-Ideas
-</span>
-
-</div>
-
-
-<div class="meta">
-
-<strong>1</strong>
-
-<span>
-Celebration
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
+<div>
 
 <div class="hero-art">
 
-<div class="art-green"></div>
-
-<div class="art-white"></div>
+<div class="art-shape"></div>
 
 </div>
 
+<div class="hero-copy" style="margin-top:35px;">
+
+<p>
+
+<strong>
+The latest Zoom Art School exhibition.
+</strong>
+
+</p>
+
+<p style="margin-top:18px;">
+
+More than 200 photographs celebrating
+the work, imagination and creativity
+of our students.
+
+</p>
+
+<a href="#gallery" class="hero-button">
+Enter the Exhibition ↓
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
+<!-- INTRO -->
 
 <section class="intro">
 
 <div class="container">
 
 <div class="intro-grid">
-
 
 <div>
 
@@ -858,27 +900,106 @@ The Exhibition
 </div>
 
 <h2>
-Made with<br>
-patience.
+Every piece<br>
+has a story.
 </h2>
 
 </div>
 
 
+<div class="intro-copy">
+
 <p>
 
-An exhibition is more than a collection
-of finished drawings. It is the result of
-hours of looking, practising, making,
-changing, starting again and finally
-saying:
+An exhibition isn't simply a collection
+of finished drawings.
 
-<strong>
-"I'm ready to show this."
-</strong>
+It's a record of learning.
+
+Every line, colour, composition and
+creative decision represents a student
+trying something, learning something
+or discovering something new.
 
 </p>
 
+<p>
+
+This exhibition brings those moments
+together in one place — celebrating
+the students of Zoom Art School and
+the work they have created.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stat-grid">
+
+<div class="stat">
+
+<div class="stat-number">
+200+
+</div>
+
+<div class="stat-label">
+Photographs
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+01
+</div>
+
+<div class="stat-label">
+Student Exhibition
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+∞
+</div>
+
+<div class="stat-label">
+Creative Possibilities
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+100%
+</div>
+
+<div class="stat-label">
+Student Creativity
+</div>
+
+</div>
 
 </div>
 
@@ -888,207 +1009,236 @@ saying:
 
 
 
-<!-- =====================================================
-     GALLERY
-===================================================== -->
+<!-- PREVIEW -->
 
-<section class="gallery-section">
+<section class="preview" id="gallery">
 
 <div class="container">
 
+<div class="preview-heading">
 
-<div class="gallery-toolbar">
+<div>
 
-<strong>
-Exhibition Collection
-</strong>
-
-<span>
-200+ photographs · Click an image to enlarge
-</span>
-
+<div class="kicker">
+A Glimpse Inside
 </div>
-
-
-
-<div class="gallery-grid">
-
-
-<div class="photo">
-
-<span class="photo-number">
-001
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-002
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-003
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-004
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-005
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-006
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-007
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-008
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-009
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-010
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-011
-</span>
-
-</div>
-
-
-<div class="photo">
-
-<span class="photo-number">
-012
-</span>
-
-</div>
-
-
-</div>
-
-
-
-<div class="photo-note">
-
-<strong>
-Coming next:
-</strong>
-
-The colourful placeholders above will be replaced
-with the actual exhibition photographs. Once the
-images are uploaded, visitors will be able to open
-each photograph at full size and download it.
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     DOWNLOAD CTA
-===================================================== -->
-
-<section class="download">
-
-<div class="container">
 
 <h2>
-Take a piece<br>
-of the exhibition<br>
-with you.
+The latest<br>
+works.
 </h2>
 
+</div>
 
 <p>
 
-The exhibition collection will include
-high-resolution photographs that visitors
-can view and download.
+These are just a few glimpses from
+the exhibition.
+
+The complete collection contains
+more than 200 photographs.
 
 </p>
 
+</div>
 
-<a href="#"
-class="download-button">
-Exhibition Downloads Coming Soon
+
+
+<!-- TEMPORARY PREVIEW -->
+
+<div class="photo-grid">
+
+
+<div class="photo">
+
+<div class="photo-placeholder"></div>
+
+<div class="photo-caption">
+Exhibition · 01
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<div class="photo-placeholder"></div>
+
+<div class="photo-caption">
+Student Work · 02
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<div class="photo-placeholder"></div>
+
+<div class="photo-caption">
+Student Work · 03
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<div class="photo-placeholder"></div>
+
+<div class="photo-caption">
+Exhibition · 04
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<div class="photo-placeholder"></div>
+
+<div class="photo-caption">
+Student Work · 05
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<div class="photo-placeholder"></div>
+
+<div class="photo-caption">
+Exhibition · 06
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ACCESS -->
+
+<div class="exhibition-access">
+
+<div>
+
+<h3>
+See all 200+ photographs.
+</h3>
+
+<p>
+Explore the complete exhibition collection
+and open individual photographs.
+</p>
+
+</div>
+
+<a href="#full-exhibition" class="access-button">
+View Complete Exhibition →
 </a>
 
 </div>
 
+</div>
+
 </section>
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FULL EXHIBITION PLACEHOLDER -->
+
+<section id="full-exhibition" style="padding:100px 0;background:#fffaf0;">
+
+<div class="container" style="text-align:center;">
+
+<div class="kicker">
+Coming Next
+</div>
+
+<h2 style="
+font-family:var(--serif);
+font-size:clamp(55px,7vw,90px);
+font-weight:400;
+line-height:.9;
+letter-spacing:-.06em;
+">
+
+The complete<br>
+exhibition archive.
+
+</h2>
+
+<p style="
+max-width:600px;
+margin:30px auto 0;
+color:#625d55;
+line-height:1.8;
+">
+
+We're going to turn the 200+ photographs
+into a proper digital exhibition — with
+large images, easy browsing and the
+ability to open and save individual
+artworks.
+
+</p>
+
+<p style="
+margin-top:25px;
+font-size:11px;
+font-weight:700;
+letter-spacing:.12em;
+text-transform:uppercase;
+color:#e85b45;
+">
+
+The photographs will be added next.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- CLOSING -->
+
+<section class="closing">
+
+<div class="container">
+
+<h2>
+Art deserves<br>
+to be <em>seen.</em>
+</h2>
+
+<p>
+
+Thank you to every student who shared
+their work and made this exhibition
+possible.
+
+And thank you to Mahesh and Maitri
+for creating a space where that work
+can happen.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
 
 <footer>
 
 <div class="footer">
-
 
 <div>
 
@@ -1102,31 +1252,21 @@ The Art Journal
 
 </div>
 
-
 <div class="footer-links">
 
-<a href="../index.html">
-Home
-</a>
+<a href="../index.html">Home</a>
 
-<a href="../journal.html">
-Journal
-</a>
+<a href="../journal.html">Journal</a>
 
-<a href="../gallery.html">
-Gallery
-</a>
+<a href="../gallery.html">Gallery</a>
 
-<a href="../instructors.html">
-Mahesh & Maitri
-</a>
+<a href="../instructors.html">Mahesh & Maitri</a>
 
-<a href="../classes.html">
-Classes
-</a>
+<a href="../classes.html">Classes</a>
+
+<a href="latest.html">Exhibition</a>
 
 </div>
-
 
 </div>
 
