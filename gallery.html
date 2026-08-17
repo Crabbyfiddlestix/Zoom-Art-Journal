@@ -20,516 +20,366 @@
 }
 
 :root {
-    --cream: #f7f0df;
-    --paper: #fffaf0;
-    --black: #171717;
-    --red: #e85b45;
-    --yellow: #f2c84b;
-    --blue: #416b91;
-    --green: #71896d;
-    --pink: #d78c8b;
-
-    --serif: "Playfair Display", Georgia, serif;
-    --sans: "DM Sans", Arial, sans-serif;
+    --cream:#f7f0df;
+    --paper:#fffaf0;
+    --black:#171717;
+    --red:#e85b45;
+    --yellow:#f2c84b;
+    --blue:#416b91;
+    --green:#71896d;
+    --pink:#d78c8b;
+    --serif:"Playfair Display",Georgia,serif;
+    --sans:"DM Sans",Arial,sans-serif;
 }
 
 body {
-    background: var(--cream);
-    color: var(--black);
-    font-family: var(--sans);
+    background:var(--cream);
+    color:var(--black);
+    font-family:var(--sans);
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+    color:inherit;
+    text-decoration:none;
+}
+
+.container {
+    width:min(1400px,calc(100% - 60px));
+    margin:auto;
 }
 
 
 /* HEADER */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position:sticky;
+    top:0;
+    z-index:100;
 
-    background: rgba(247,240,223,.95);
-    backdrop-filter: blur(12px);
+    background:rgba(247,240,223,.95);
+    backdrop-filter:blur(12px);
 
-    border-bottom: 1px solid rgba(23,23,23,.18);
+    border-bottom:1px solid rgba(23,23,23,.18);
 }
 
 .header {
-    width: min(1400px, calc(100% - 60px));
-    min-height: 92px;
-    margin: auto;
+    width:min(1400px,calc(100% - 60px));
+    min-height:92px;
+    margin:auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand {
-    line-height: 1;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .brand-school {
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: .22em;
+    display:block;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.22em;
 }
 
 .brand-journal {
-    display: block;
-    margin-top: 8px;
-
-    font-family: var(--serif);
-    font-size: 20px;
+    display:block;
+    margin-top:8px;
+    font-family:var(--serif);
+    font-size:20px;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
 nav a {
-    font-size: 12px;
-    font-weight: 700;
+    font-size:12px;
+    font-weight:700;
 }
 
 nav a:hover {
-    color: var(--red);
+    color:var(--red);
 }
 
 .nav-button {
-    padding: 13px 18px;
-    background: var(--black);
-    color: white;
+    padding:13px 18px;
+    background:var(--black);
+    color:white;
 }
 
 
 /* HERO */
 
 .hero {
-    padding: 110px 0 90px;
-}
-
-.container {
-    width: min(1400px, calc(100% - 60px));
-    margin: auto;
+    padding:110px 0 100px;
 }
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr .75fr;
-    gap: 80px;
-    align-items: end;
+    display:grid;
+    grid-template-columns:1fr .75fr;
+    gap:90px;
+    align-items:end;
 }
 
 .kicker {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 25px;
+    margin-bottom:25px;
+    color:var(--red);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.2em;
+    text-transform:uppercase;
 }
 
 .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(75px, 10vw, 150px);
-    font-weight: 400;
-    line-height: .8;
-    letter-spacing: -.07em;
+    font-family:var(--serif);
+    font-size:clamp(75px,10vw,145px);
+    font-weight:400;
+    line-height:.78;
+    letter-spacing:-.07em;
 }
 
 .hero h1 em {
-    color: var(--blue);
+    color:var(--blue);
 }
 
-.hero-text {
-    max-width: 440px;
-    color: #625d55;
-    line-height: 1.8;
-}
-
-
-/* COLOUR BAR */
-
-.colour-bar {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    height: 14px;
-}
-
-.colour-bar div:nth-child(1) { background: var(--red); }
-.colour-bar div:nth-child(2) { background: var(--yellow); }
-.colour-bar div:nth-child(3) { background: var(--blue); }
-.colour-bar div:nth-child(4) { background: var(--green); }
-.colour-bar div:nth-child(5) { background: var(--pink); }
-.colour-bar div:nth-child(6) { background: var(--black); }
-
-
-/* INTRO */
-
-.intro {
-    padding: 70px 0 45px;
-}
-
-.intro-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-}
-
-.intro h2 {
-    font-family: var(--serif);
-    font-size: clamp(45px, 5vw, 75px);
-    font-weight: 400;
-    line-height: .9;
-    letter-spacing: -.05em;
-}
-
-.intro p {
-    max-width: 450px;
-    color: #625d55;
-    line-height: 1.8;
+.hero-copy {
+    max-width:480px;
+    color:#625d55;
+    font-size:17px;
+    line-height:1.8;
 }
 
 
-/* FILTERS */
+/* COLOUR STRIPE */
 
-.filters {
-    padding: 20px 0 40px;
+.colour-stripe {
+    height:15px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
 }
 
-.filter-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.filter {
-    border: 1px solid rgba(23,23,23,.25);
-    padding: 11px 17px;
-
-    background: transparent;
-
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: .1em;
-    text-transform: uppercase;
-
-    cursor: pointer;
-}
-
-.filter:hover,
-.filter.active {
-    background: var(--black);
-    color: white;
-}
+.colour-stripe div:nth-child(1){background:var(--red);}
+.colour-stripe div:nth-child(2){background:var(--yellow);}
+.colour-stripe div:nth-child(3){background:var(--blue);}
+.colour-stripe div:nth-child(4){background:var(--green);}
+.colour-stripe div:nth-child(5){background:var(--pink);}
 
 
 /* GALLERY */
 
 .gallery {
-    padding: 10px 0 130px;
+    padding:110px 0 140px;
+    background:#e9dfcf;
 }
+
+.gallery-heading {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:50px;
+    margin-bottom:60px;
+}
+
+.gallery-heading h2 {
+    font-family:var(--serif);
+    font-size:clamp(55px,7vw,95px);
+    font-weight:400;
+    line-height:.85;
+    letter-spacing:-.06em;
+}
+
+.gallery-heading p {
+    max-width:430px;
+    color:#625d55;
+    line-height:1.7;
+}
+
+
+/* PLACEHOLDER ARTWORKS */
 
 .art-grid {
-    columns: 4 260px;
-    column-gap: 16px;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:14px;
 }
 
-.art-card {
-    break-inside: avoid;
-    margin-bottom: 16px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    cursor: pointer;
-
-    background: var(--paper);
+.art {
+    min-height:330px;
+    position:relative;
+    overflow:hidden;
 }
 
-.art-card img {
-    display: block;
-    width: 100%;
-    height: auto;
+.art:nth-child(1) {
+    grid-column:span 7;
+    min-height:500px;
+    background:var(--red);
 }
 
-.art-placeholder {
-    position: relative;
-    height: 340px;
-    overflow: hidden;
+.art:nth-child(2) {
+    grid-column:span 5;
+    background:var(--yellow);
 }
 
-.art-card:nth-child(6n+1) .art-placeholder {
-    background: var(--red);
+.art:nth-child(3) {
+    grid-column:span 4;
+    background:var(--blue);
 }
 
-.art-card:nth-child(6n+2) .art-placeholder {
-    background: var(--yellow);
+.art:nth-child(4) {
+    grid-column:span 4;
+    background:var(--green);
 }
 
-.art-card:nth-child(6n+3) .art-placeholder {
-    background: var(--blue);
+.art:nth-child(5) {
+    grid-column:span 4;
+    background:var(--pink);
 }
 
-.art-card:nth-child(6n+4) .art-placeholder {
-    background: var(--green);
+.art:nth-child(6) {
+    grid-column:span 5;
+    background:#b79c7a;
 }
 
-.art-card:nth-child(6n+5) .art-placeholder {
-    background: var(--pink);
-}
-
-.art-card:nth-child(6n+6) .art-placeholder {
-    background: #b59c7c;
-}
-
-.art-placeholder::before {
-    content: "";
-
-    position: absolute;
-
-    width: 65%;
-    height: 65%;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,.65);
-
-    left: 17%;
-    top: 16%;
-}
-
-.art-placeholder::after {
-    content: "";
-
-    position: absolute;
-
-    width: 30%;
-    height: 85%;
-
-    background: rgba(23,23,23,.7);
-
-    left: 40%;
-    top: 8%;
-
-    transform: rotate(20deg);
-}
-
-.art-info {
-    padding: 17px 18px 20px;
-    background: var(--paper);
-}
-
-.art-info small {
-    font-size: 9px;
-    font-weight: 700;
-
-    letter-spacing: .15em;
-    text-transform: uppercase;
-
-    color: var(--red);
-}
-
-.art-info h3 {
-    margin-top: 7px;
-
-    font-family: var(--serif);
-    font-size: 25px;
-    font-weight: 400;
-}
-
-.art-info p {
-    margin-top: 6px;
-
-    font-size: 12px;
-    color: #625d55;
+.art:nth-child(7) {
+    grid-column:span 7;
+    background:#8c7b6c;
 }
 
 
-/* VIEW ALL */
+/* ABSTRACT PLACEHOLDER SHAPES */
 
-.view-more {
-    text-align: center;
-    padding-top: 55px;
+.art::before {
+    content:"";
+    position:absolute;
+
+    width:60%;
+    height:70%;
+
+    left:20%;
+    top:15%;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.58);
 }
 
-.view-more a {
-    display: inline-block;
+.art::after {
+    content:"";
+    position:absolute;
 
-    padding: 16px 25px;
+    width:24%;
+    height:90%;
 
-    background: var(--black);
-    color: white;
+    left:40%;
+    top:5%;
 
-    font-size: 10px;
-    font-weight: 700;
+    background:rgba(23,23,23,.55);
 
-    letter-spacing: .1em;
-    text-transform: uppercase;
+    transform:rotate(22deg);
 }
 
-.view-more a:hover {
-    background: var(--red);
+.art-label {
+    position:absolute;
+    left:18px;
+    bottom:18px;
+    z-index:2;
+
+    padding:9px 12px;
+
+    background:white;
+
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
 }
 
 
-/* EXHIBITION PROMO */
+/* REAL PHOTO NOTE */
 
-.exhibition-promo {
-    padding: 100px 0;
+.gallery-note {
+    margin-top:45px;
 
-    background: var(--blue);
-    color: white;
+    padding:35px;
+
+    background:var(--black);
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
 }
 
-.exhibition-promo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
+.gallery-note h3 {
+    font-family:var(--serif);
+    font-size:35px;
+    font-weight:400;
 }
 
-.exhibition-promo h2 {
-    font-family: var(--serif);
-
-    font-size: clamp(55px, 6vw, 90px);
-
-    font-weight: 400;
-
-    line-height: .88;
-    letter-spacing: -.06em;
+.gallery-note p {
+    margin-top:7px;
+    color:#bbb5ac;
+    font-size:13px;
 }
 
-.exhibition-promo p {
-    margin-top: 25px;
+.gallery-note a {
+    flex-shrink:0;
 
-    max-width: 500px;
+    padding:16px 22px;
 
-    color: #e4e8ec;
+    background:var(--yellow);
+    color:var(--black);
 
-    line-height: 1.8;
-}
-
-.exhibition-link {
-    display: inline-block;
-
-    margin-top: 30px;
-
-    padding: 16px 22px;
-
-    background: var(--yellow);
-    color: var(--black);
-
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: .1em;
-    text-transform: uppercase;
-}
-
-.exhibition-link:hover {
-    background: white;
-}
-
-.promo-art {
-    min-height: 450px;
-
-    position: relative;
-
-    background: var(--yellow);
-
-    overflow: hidden;
-}
-
-.promo-art::before {
-    content: "";
-
-    position: absolute;
-
-    width: 400px;
-    height: 400px;
-
-    border-radius: 50%;
-
-    background: var(--red);
-
-    left: 5%;
-    top: 12%;
-}
-
-.promo-art::after {
-    content: "";
-
-    position: absolute;
-
-    width: 170px;
-    height: 600px;
-
-    background: var(--green);
-
-    right: 18%;
-    top: -15%;
-
-    transform: rotate(25deg);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
 }
 
 
 /* FOOTER */
 
 footer {
-    padding: 65px 0;
-
-    background: var(--black);
-    color: white;
+    padding:65px 0;
+    background:var(--black);
+    color:white;
 }
 
 .footer {
-    width: min(1400px, calc(100% - 60px));
-    margin: auto;
+    width:min(1400px,calc(100% - 60px));
+    margin:auto;
 
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
 }
 
 .footer strong {
-    display: block;
-
-    font-size: 12px;
-    letter-spacing: .18em;
+    display:block;
+    font-size:12px;
+    letter-spacing:.18em;
 }
 
 .footer span {
-    display: block;
-
-    margin-top: 8px;
-
-    font-family: var(--serif);
-    font-size: 22px;
+    display:block;
+    margin-top:8px;
+    font-family:var(--serif);
+    font-size:22px;
 }
 
 .footer-links {
-    display: flex;
-    gap: 25px;
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
 .footer-links a {
-    font-size: 12px;
+    font-size:12px;
 }
 
 .footer-links a:hover {
-    color: var(--yellow);
+    color:var(--yellow);
 }
 
 
@@ -538,53 +388,65 @@ footer {
 @media(max-width:900px) {
 
     nav a:not(.nav-button) {
-        display: none;
+        display:none;
     }
 
-    .hero-grid,
-    .exhibition-promo-grid {
-        grid-template-columns: 1fr;
+    .hero-grid {
+        grid-template-columns:1fr;
     }
 
-    .promo-art {
-        min-height: 350px;
+    .gallery-heading {
+        display:block;
+    }
+
+    .gallery-heading p {
+        margin-top:25px;
+    }
+
+    .art-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .art,
+    .art:nth-child(n) {
+        grid-column:span 1;
+        min-height:300px;
+    }
+
+    .art:nth-child(1) {
+        grid-column:span 2;
+    }
+
+    .gallery-note {
+        flex-direction:column;
+        align-items:flex-start;
     }
 }
 
 @media(max-width:560px) {
 
-    .header,
     .container,
+    .header,
     .footer {
-        width: calc(100% - 30px);
+        width:calc(100% - 30px);
     }
 
     .hero {
-        padding: 75px 0;
+        padding:75px 0;
     }
 
-    .hero-grid {
-        display: block;
+    .art-grid {
+        grid-template-columns:1fr;
     }
 
-    .hero-text {
-        margin-top: 30px;
-    }
-
-    .intro-row {
-        display: block;
-    }
-
-    .intro p {
-        margin-top: 25px;
+    .art:nth-child(n),
+    .art:nth-child(1) {
+        grid-column:span 1;
+        min-height:300px;
     }
 
     .footer {
-        flex-direction: column;
-    }
-
-    .footer-links {
-        flex-wrap: wrap;
+        flex-direction:column;
     }
 }
 
@@ -594,13 +456,11 @@ footer {
 <body>
 
 
-<!-- HEADER -->
-
 <header>
 
 <div class="header">
 
-<a href="index.html" class="brand">
+<a href="index.html">
 
 <span class="brand-school">
 ZOOM ART SCHOOL
@@ -637,9 +497,6 @@ Book a Free Trial
 </header>
 
 
-
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="container">
@@ -649,69 +506,31 @@ Book a Free Trial
 <div>
 
 <div class="kicker">
-Zoom Art School · Student Work
+Zoom Art School · Student Gallery
 </div>
 
 <h1>
-Look.<br>
-Make.<br>
-<em>Imagine.</em>
+Made<br>
+with<br>
+<em>imagination.</em>
 </h1>
 
 </div>
 
-<p class="hero-text">
-
-Welcome to the Zoom Art School student gallery —
-a growing collection of drawings, paintings,
-experiments and creative discoveries made
-by our students.
-
-Every piece is different.
-
-And that's exactly the point.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<div class="colour-bar">
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-</div>
-
-
-
-<!-- INTRO -->
-
-<section class="intro">
-
-<div class="container">
-
-<div class="intro-row">
-
-<h2>
-Made by<br>
-our students.
-</h2>
+<div class="hero-copy">
 
 <p>
 
-Art isn't about producing identical results.
-It's about helping each student discover
-their own way of seeing and making.
+Welcome to the student gallery of
+Zoom Art School.
 
-This gallery celebrates that journey.
+</p>
+
+<p style="margin-top:25px;">
+
+A collection of drawings, paintings,
+experiments and creative projects
+made by our students.
 
 </p>
 
@@ -719,389 +538,102 @@ This gallery celebrates that journey.
 
 </div>
 
-</section>
-
-
-
-<!-- FILTERS -->
-
-<section class="filters">
-
-<div class="container">
-
-<div class="filter-row">
-
-<button class="filter active">
-All Artwork
-</button>
-
-<button class="filter">
-Drawing
-</button>
-
-<button class="filter">
-Painting
-</button>
-
-<button class="filter">
-Portraits
-</button>
-
-<button class="filter">
-Nature
-</button>
-
-<button class="filter">
-Creative Projects
-</button>
-
-</div>
-
 </div>
 
 </section>
 
 
+<div class="colour-stripe">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
 
-<!-- GALLERY -->
 
 <section class="gallery">
 
 <div class="container">
 
-<div class="art-grid">
-
-
-<!-- ARTWORK 01 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Finding Form
-</h3>
-
-<p>
-Drawing · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 02 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Colour & Light
-</h3>
-
-<p>
-Painting · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 03 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-A Different Perspective
-</h3>
-
-<p>
-Creative Project · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 04 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Learning to Observe
-</h3>
-
-<p>
-Drawing · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 05 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Portrait Study
-</h3>
-
-<p>
-Portrait · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 06 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-The Natural World
-</h3>
-
-<p>
-Nature · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 07 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Lines & Movement
-</h3>
-
-<p>
-Drawing · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 08 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Exploring Colour
-</h3>
-
-<p>
-Painting · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 09 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Quiet Moments
-</h3>
-
-<p>
-Drawing · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 10 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Experimenting
-</h3>
-
-<p>
-Creative Project · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 11 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-Seeing Differently
-</h3>
-
-<p>
-Drawing · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-<!-- ARTWORK 12 -->
-
-<article class="art-card">
-
-<div class="art-placeholder"></div>
-
-<div class="art-info">
-
-<small>Student Artwork</small>
-
-<h3>
-A Study in Colour
-</h3>
-
-<p>
-Painting · Zoom Art School
-</p>
-
-</div>
-
-</article>
-
-
-</div>
-
-
-<div class="view-more">
-
-<a href="exhibitions/latest.html">
-Explore the Latest Exhibition →
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- EXHIBITION PROMO -->
-
-<section class="exhibition-promo">
-
-<div class="container">
-
-<div class="exhibition-promo-grid">
+<div class="gallery-heading">
 
 <div>
 
-<div class="kicker" style="color:#f2c84b;">
-Latest Exhibition
+<div class="kicker">
+Student Work
 </div>
 
 <h2>
-200+ photographs.<br>
-One big<br>
-celebration.
+Every mark<br>
+matters.
 </h2>
+
+</div>
 
 <p>
 
-Our latest student exhibition brings
-together more than 200 photographs
-of artwork and memorable moments.
+These artworks represent different
+stages of learning, different ideas
+and different ways of seeing.
+
+There is no single way to make art.
 
 </p>
-
-<a href="exhibitions/latest.html"
-class="exhibition-link">
-Enter the Exhibition →
-</a>
 
 </div>
 
 
-<div class="promo-art"></div>
+<div class="art-grid">
+
+<div class="art">
+<div class="art-label">Student Artwork · 01</div>
+</div>
+
+<div class="art">
+<div class="art-label">Student Artwork · 02</div>
+</div>
+
+<div class="art">
+<div class="art-label">Student Artwork · 03</div>
+</div>
+
+<div class="art">
+<div class="art-label">Student Artwork · 04</div>
+</div>
+
+<div class="art">
+<div class="art-label">Student Artwork · 05</div>
+</div>
+
+<div class="art">
+<div class="art-label">Student Artwork · 06</div>
+</div>
+
+<div class="art">
+<div class="art-label">Student Artwork · 07</div>
+</div>
+
+</div>
+
+
+<div class="gallery-note">
+
+<div>
+
+<h3>
+See the latest exhibition.
+</h3>
+
+<p>
+More than 200 photographs of student work.
+</p>
+
+</div>
+
+<a href="exhibitions/latest.html">
+Enter Exhibition →
+</a>
 
 </div>
 
@@ -1109,9 +641,6 @@ Enter the Exhibition →
 
 </section>
 
-
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1119,28 +648,19 @@ Enter the Exhibition →
 
 <div>
 
-<strong>
-ZOOM ART SCHOOL
-</strong>
+<strong>ZOOM ART SCHOOL</strong>
 
-<span>
-The Art Journal
-</span>
+<span>The Art Journal</span>
 
 </div>
 
 <div class="footer-links">
 
 <a href="index.html">Home</a>
-
 <a href="journal.html">Journal</a>
-
 <a href="gallery.html">Gallery</a>
-
 <a href="instructors.html">Mahesh & Maitri</a>
-
 <a href="classes.html">Classes</a>
-
 <a href="exhibitions/latest.html">Exhibition</a>
 
 </div>
@@ -1148,6 +668,7 @@ The Art Journal
 </div>
 
 </footer>
+
 
 </body>
 </html>
