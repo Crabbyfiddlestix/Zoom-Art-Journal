@@ -7,746 +7,616 @@
 <title>Mahesh & Maitri | Zoom Art School</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 :root {
-    --cream: #f7f0df;
-    --paper: #fffaf0;
-    --black: #171717;
-    --red: #e85b45;
-    --yellow: #f2c84b;
-    --blue: #416b91;
-    --green: #71896d;
-    --pink: #d78c8b;
+    --cream:#f7f0df;
+    --paper:#fffaf0;
+    --black:#171717;
+    --red:#e85b45;
+    --yellow:#f2c84b;
+    --blue:#416b91;
+    --green:#71896d;
+    --pink:#d78c8b;
 
-    --serif: "Playfair Display", Georgia, serif;
-    --sans: "DM Sans", Arial, sans-serif;
+    --serif:"Playfair Display",Georgia,serif;
+    --sans:"DM Sans",Arial,sans-serif;
 }
 
 body {
-    background: var(--cream);
-    color: var(--black);
-    font-family: var(--sans);
+    background:var(--cream);
+    color:var(--black);
+    font-family:var(--sans);
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-    background: rgba(247,240,223,.95);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(23,23,23,.18);
-}
-
-.header {
-    width: min(1400px, calc(100% - 60px));
-    min-height: 92px;
-    margin: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand-school {
-    display: block;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    letter-spacing: .22em;
-}
-
-.brand-journal {
-    display: block;
-
-    margin-top: 8px;
-
-    font-family: var(--serif);
-    font-size: 20px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-nav a {
-    font-size: 12px;
-    font-weight: 700;
-}
-
-nav a:hover {
-    color: var(--red);
-}
-
-.nav-button {
-    padding: 13px 18px;
-
-    background: var(--black);
-    color: white;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    padding: 110px 0 100px;
+    color:inherit;
+    text-decoration:none;
 }
 
 .container {
-    width: min(1400px, calc(100% - 60px));
-    margin: auto;
+    width:min(1400px,calc(100% - 60px));
+    margin:auto;
+}
+
+
+/* HEADER */
+
+header {
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    background:rgba(247,240,223,.95);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(23,23,23,.18);
+}
+
+.header {
+    width:min(1400px,calc(100% - 60px));
+    min-height:92px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand-school {
+    display:block;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.22em;
+}
+
+.brand-journal {
+    display:block;
+    margin-top:8px;
+    font-family:var(--serif);
+    font-size:20px;
+}
+
+nav {
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+nav a {
+    font-size:12px;
+    font-weight:700;
+}
+
+nav a:hover {
+    color:var(--red);
+}
+
+.nav-button {
+    padding:13px 18px;
+    background:var(--black);
+    color:white;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height:720px;
+    padding:100px 0;
+
+    background:var(--red);
 }
 
 .hero-grid {
-    display: grid;
-
-    grid-template-columns: 1.1fr .9fr;
-
-    gap: 80px;
-
-    align-items: center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
 }
 
 .kicker {
-    margin-bottom: 24px;
+    margin-bottom:25px;
 
-    color: var(--red);
-
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: .2em;
-    text-transform: uppercase;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.2em;
+    text-transform:uppercase;
 }
 
 .hero h1 {
-    font-family: var(--serif);
+    font-family:var(--serif);
 
-    font-size: clamp(70px, 9vw, 135px);
+    font-size:clamp(75px,10vw,150px);
 
-    font-weight: 400;
+    font-weight:400;
 
-    line-height: .82;
+    line-height:.78;
 
-    letter-spacing: -.07em;
+    letter-spacing:-.07em;
 }
 
 .hero h1 em {
-    color: var(--blue);
+    color:var(--yellow);
 }
 
 .hero-copy {
-    max-width: 500px;
+    max-width:520px;
 
-    color: #625d55;
+    font-size:18px;
 
-    font-size: 17px;
-
-    line-height: 1.8;
+    line-height:1.8;
 }
 
-.hero-copy strong {
-    color: var(--black);
-}
-
-
-/* =========================
-   COLOUR STRIP
-========================= */
-
-.colour-strip {
-    display: grid;
-
-    grid-template-columns: repeat(5, 1fr);
-
-    height: 18px;
-}
-
-.colour-strip div:nth-child(1) {
-    background: var(--red);
-}
-
-.colour-strip div:nth-child(2) {
-    background: var(--yellow);
-}
-
-.colour-strip div:nth-child(3) {
-    background: var(--blue);
-}
-
-.colour-strip div:nth-child(4) {
-    background: var(--green);
-}
-
-.colour-strip div:nth-child(5) {
-    background: var(--pink);
+.hero-copy p + p {
+    margin-top:25px;
 }
 
 
-/* =========================
-   FOUNDERS
-========================= */
+/* ABSTRACT PORTRAIT AREA */
 
-.founders {
-    padding: 100px 0 130px;
+.portrait {
+    height:520px;
 
-    background: #e9dfcf;
+    position:relative;
+
+    background:var(--yellow);
+
+    overflow:hidden;
 }
 
-.founders-heading {
-    display: flex;
+.portrait::before {
+    content:"";
 
-    justify-content: space-between;
+    position:absolute;
 
-    align-items: end;
+    width:390px;
+    height:480px;
 
-    gap: 40px;
+    border-radius:48% 48% 45% 45%;
 
-    margin-bottom: 65px;
+    background:var(--blue);
+
+    left:15%;
+    top:8%;
 }
 
-.founders-heading h2 {
-    font-family: var(--serif);
+.portrait::after {
+    content:"";
 
-    font-size: clamp(55px, 7vw, 100px);
+    position:absolute;
 
-    font-weight: 400;
+    width:170px;
+    height:170px;
 
-    line-height: .87;
+    border-radius:50%;
 
-    letter-spacing: -.06em;
+    background:var(--paper);
+
+    left:37%;
+    top:19%;
 }
 
-.founders-heading p {
-    max-width: 400px;
+.portrait-label {
+    position:absolute;
 
-    color: #625d55;
+    left:25px;
+    bottom:25px;
 
-    line-height: 1.7;
+    padding:12px 15px;
+
+    background:white;
+
+    font-size:10px;
+    font-weight:700;
+
+    letter-spacing:.1em;
+    text-transform:uppercase;
+
+    z-index:3;
 }
 
 
-/* =========================
-   PERSON CARDS
-========================= */
+/* INTRO */
+
+.intro {
+    padding:130px 0;
+}
+
+.intro-grid {
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    gap:100px;
+}
+
+.intro h2 {
+    font-family:var(--serif);
+
+    font-size:clamp(55px,7vw,100px);
+
+    font-weight:400;
+
+    line-height:.85;
+
+    letter-spacing:-.06em;
+}
+
+.intro-copy {
+    max-width:700px;
+
+    color:#625d55;
+
+    font-size:18px;
+
+    line-height:1.9;
+}
+
+.intro-copy p + p {
+    margin-top:28px;
+}
+
+
+/* TWO PEOPLE */
 
 .people {
-    display: grid;
+    padding:120px 0;
 
-    grid-template-columns: 1fr 1fr;
+    background:#e9dfcf;
+}
 
-    gap: 20px;
+.people-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
 }
 
 .person {
-    background: var(--paper);
+    min-height:600px;
+
+    padding:45px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
 }
 
-.person-image {
-    height: 580px;
-
-    position: relative;
-
-    overflow: hidden;
+.person.mahesh {
+    background:var(--blue);
+    color:white;
 }
 
-
-/*
-   Temporary portrait areas.
-
-   These will be replaced with
-   Mahesh's and Maitri's actual
-   photographs later.
-*/
-
-.mahesh-image {
-    background: var(--blue);
+.person.maitri {
+    background:var(--yellow);
 }
 
-.maitri-image {
-    background: var(--pink);
+.person-number {
+    font-family:var(--serif);
+
+    font-size:80px;
+
+    opacity:.35;
+
+    margin-bottom:auto;
 }
 
+.person h2 {
+    font-family:var(--serif);
 
-/* abstract portrait placeholders */
+    font-size:65px;
 
-.mahesh-image::before {
-    content: "";
+    font-weight:400;
 
-    position: absolute;
+    line-height:.85;
 
-    width: 320px;
-    height: 320px;
-
-    border-radius: 50%;
-
-    background: var(--yellow);
-
-    left: 15%;
-    top: 12%;
-}
-
-.mahesh-image::after {
-    content: "";
-
-    position: absolute;
-
-    width: 190px;
-    height: 390px;
-
-    background: var(--red);
-
-    left: 42%;
-    top: 18%;
-
-    transform: rotate(15deg);
-}
-
-
-.maitri-image::before {
-    content: "";
-
-    position: absolute;
-
-    width: 340px;
-    height: 340px;
-
-    border-radius: 50%;
-
-    background: var(--yellow);
-
-    right: 12%;
-    top: 15%;
-}
-
-.maitri-image::after {
-    content: "";
-
-    position: absolute;
-
-    width: 200px;
-    height: 400px;
-
-    background: var(--green);
-
-    left: 28%;
-    top: 20%;
-
-    transform: rotate(-17deg);
-}
-
-
-.person-label {
-    position: absolute;
-
-    left: 25px;
-    bottom: 25px;
-
-    z-index: 5;
-
-    padding: 10px 13px;
-
-    background: white;
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: .1em;
-
-    text-transform: uppercase;
-}
-
-.person-content {
-    padding: 35px 35px 45px;
+    letter-spacing:-.05em;
 }
 
 .person-role {
-    color: var(--red);
+    margin-top:15px;
 
-    font-size: 10px;
+    font-size:10px;
+    font-weight:700;
 
-    font-weight: 700;
-
-    letter-spacing: .18em;
-
-    text-transform: uppercase;
+    letter-spacing:.15em;
+    text-transform:uppercase;
 }
 
-.person-content h3 {
-    margin-top: 10px;
+.person p {
+    max-width:450px;
 
-    font-family: var(--serif);
+    margin-top:25px;
 
-    font-size: 55px;
+    font-size:14px;
 
-    font-weight: 400;
-
-    line-height: .9;
-
-    letter-spacing: -.05em;
-}
-
-.person-content p {
-    max-width: 600px;
-
-    margin-top: 25px;
-
-    color: #625d55;
-
-    line-height: 1.8;
+    line-height:1.8;
 }
 
 
-/* =========================
-   PHILOSOPHY
-========================= */
+/* PHILOSOPHY */
 
 .philosophy {
-    padding: 130px 0;
+    padding:130px 0;
 
-    background: var(--black);
+    background:var(--black);
 
-    color: white;
+    color:white;
 
-    text-align: center;
+    text-align:center;
 }
 
-.philosophy-inner {
-    width: min(1000px, calc(100% - 60px));
-
-    margin: auto;
-}
-
-.philosophy-mark {
-    color: var(--yellow);
-
-    font-family: var(--serif);
-
-    font-size: 100px;
-
-    line-height: .5;
+.philosophy .kicker {
+    color:var(--yellow);
 }
 
 .philosophy h2 {
-    margin-top: 30px;
+    max-width:1100px;
 
-    font-family: var(--serif);
+    margin:auto;
 
-    font-size: clamp(45px, 6vw, 80px);
+    font-family:var(--serif);
 
-    font-weight: 400;
+    font-size:clamp(55px,7vw,100px);
 
-    line-height: 1.02;
+    font-weight:400;
 
-    letter-spacing: -.05em;
+    line-height:.9;
+
+    letter-spacing:-.06em;
+}
+
+.philosophy h2 em {
+    color:var(--red);
 }
 
 .philosophy p {
-    max-width: 650px;
+    max-width:650px;
 
-    margin: 30px auto 0;
+    margin:35px auto 0;
 
-    color: #c9c2b8;
+    color:#bbb5ac;
 
-    line-height: 1.8;
+    line-height:1.8;
 }
 
 
-/* =========================
-   TEACHING
-========================= */
-
-.teaching {
-    padding: 120px 0;
-}
-
-.teaching-grid {
-    display: grid;
-
-    grid-template-columns: .8fr 1.2fr;
-
-    gap: 90px;
-
-    align-items: start;
-}
-
-.teaching h2 {
-    font-family: var(--serif);
-
-    font-size: clamp(55px, 6vw, 85px);
-
-    font-weight: 400;
-
-    line-height: .88;
-
-    letter-spacing: -.055em;
-}
-
-.teaching-copy p {
-    color: #625d55;
-
-    line-height: 1.8;
-
-    margin-bottom: 22px;
-}
+/* VALUES */
 
 .values {
-    display: grid;
+    padding:120px 0;
+}
 
-    grid-template-columns: 1fr 1fr;
+.values-heading {
+    margin-bottom:60px;
+}
 
-    gap: 12px;
+.values-heading h2 {
+    font-family:var(--serif);
 
-    margin-top: 35px;
+    font-size:clamp(55px,7vw,95px);
+
+    font-weight:400;
+
+    line-height:.85;
+
+    letter-spacing:-.06em;
+}
+
+.values-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
 }
 
 .value {
-    padding: 25px;
+    min-height:300px;
 
-    background: var(--paper);
+    padding:30px;
 
-    border-top: 4px solid var(--red);
+    background:var(--paper);
+
+    border-top:6px solid var(--red);
 }
 
 .value:nth-child(2) {
-    border-color: var(--yellow);
+    border-color:var(--yellow);
 }
 
 .value:nth-child(3) {
-    border-color: var(--blue);
+    border-color:var(--blue);
 }
 
 .value:nth-child(4) {
-    border-color: var(--green);
+    border-color:var(--green);
 }
 
-.value strong {
-    display: block;
-
-    font-family: var(--serif);
-
-    font-size: 25px;
-
-    font-weight: 400;
+.value-number {
+    font-family:var(--serif);
+    font-size:55px;
 }
 
-.value span {
-    display: block;
+.value h3 {
+    margin-top:35px;
 
-    margin-top: 7px;
+    font-family:var(--serif);
 
-    color: #625d55;
+    font-size:30px;
 
-    font-size: 12px;
+    font-weight:400;
+}
 
-    line-height: 1.5;
+.value p {
+    margin-top:12px;
+
+    color:#625d55;
+
+    font-size:12px;
+
+    line-height:1.6;
 }
 
 
-/* =========================
-   CTA
-========================= */
+/* CTA */
 
 .cta {
-    padding: 110px 0;
+    padding:130px 0;
 
-    background: var(--yellow);
+    background:var(--yellow);
 
-    text-align: center;
+    text-align:center;
 }
 
 .cta h2 {
-    font-family: var(--serif);
+    font-family:var(--serif);
 
-    font-size: clamp(55px, 7vw, 100px);
+    font-size:clamp(65px,8vw,120px);
 
-    font-weight: 400;
+    font-weight:400;
 
-    line-height: .87;
+    line-height:.83;
 
-    letter-spacing: -.06em;
+    letter-spacing:-.07em;
 }
 
 .cta p {
-    margin: 25px auto 0;
+    max-width:570px;
 
-    max-width: 550px;
+    margin:30px auto;
 
-    color: #514b42;
+    color:#514b42;
 
-    line-height: 1.7;
+    line-height:1.8;
 }
 
 .cta-button {
-    display: inline-block;
+    display:inline-block;
 
-    margin-top: 30px;
+    padding:18px 27px;
 
-    padding: 17px 25px;
+    background:var(--black);
 
-    background: var(--black);
+    color:white;
 
-    color: white;
+    font-size:10px;
+    font-weight:700;
 
-    font-size: 10px;
+    letter-spacing:.12em;
 
-    font-weight: 700;
-
-    letter-spacing: .1em;
-
-    text-transform: uppercase;
-}
-
-.cta-button:hover {
-    background: var(--red);
+    text-transform:uppercase;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-    padding: 65px 0;
+    padding:65px 0;
 
-    background: var(--black);
+    background:var(--black);
 
-    color: white;
+    color:white;
 }
 
 .footer {
-    width: min(1400px, calc(100% - 60px));
+    width:min(1400px,calc(100% - 60px));
 
-    margin: auto;
+    margin:auto;
 
-    display: flex;
+    display:flex;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    gap: 40px;
+    gap:40px;
 }
 
 .footer strong {
-    display: block;
+    display:block;
 
-    font-size: 12px;
+    font-size:12px;
 
-    letter-spacing: .18em;
+    letter-spacing:.18em;
 }
 
 .footer span {
-    display: block;
+    display:block;
 
-    margin-top: 8px;
+    margin-top:8px;
 
-    font-family: var(--serif);
+    font-family:var(--serif);
 
-    font-size: 22px;
+    font-size:22px;
 }
 
 .footer-links {
-    display: flex;
-
-    gap: 25px;
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
 .footer-links a {
-    font-size: 12px;
+    font-size:12px;
 }
 
 .footer-links a:hover {
-    color: var(--yellow);
+    color:var(--yellow);
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:900px) {
 
     nav a:not(.nav-button) {
-        display: none;
+        display:none;
     }
 
     .hero-grid,
-    .people,
-    .teaching-grid {
-        grid-template-columns: 1fr;
+    .intro-grid {
+        grid-template-columns:1fr;
     }
 
-    .person-image {
-        height: 500px;
+    .people-grid {
+        grid-template-columns:1fr;
     }
+
+    .values-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
 }
 
 @media(max-width:560px) {
 
-    .header,
     .container,
+    .header,
     .footer {
-        width: calc(100% - 30px);
+        width:calc(100% - 30px);
     }
 
     .hero {
-        padding: 75px 0;
+        padding:70px 0;
     }
 
-    .hero-grid {
-        display: block;
+    .portrait {
+        height:350px;
     }
 
-    .hero-copy {
-        margin-top: 35px;
-    }
-
-    .founders-heading {
-        display: block;
-    }
-
-    .founders-heading p {
-        margin-top: 25px;
-    }
-
-    .values {
-        grid-template-columns: 1fr;
+    .values-grid {
+        grid-template-columns:1fr;
     }
 
     .footer {
-        flex-direction: column;
+        flex-direction:column;
     }
 
-    .footer-links {
-        flex-wrap: wrap;
-    }
 }
 
 </style>
@@ -754,8 +624,6 @@ footer {
 
 <body>
 
-
-<!-- HEADER -->
 
 <header>
 
@@ -800,7 +668,6 @@ Book a Free Trial
 </header>
 
 
-
 <!-- HERO -->
 
 <section class="hero">
@@ -812,41 +679,104 @@ Book a Free Trial
 <div>
 
 <div class="kicker">
-Zoom Art School · The People Behind the School
+Zoom Art School · The People Behind The School
 </div>
 
 <h1>
-Meet the<br>
-people<br>
-behind<br>
-<em>the art.</em>
+Meet<br>
+the<br>
+<em>artists.</em>
 </h1>
 
 </div>
 
-<div class="hero-copy">
+
+<div>
+
+<div class="portrait">
+
+<div class="portrait-label">
+Mahesh & Maitri · Zoom Art School
+</div>
+
+</div>
+
+<div class="hero-copy" style="margin-top:35px;">
+
+<p>
+<strong>
+Two people. One shared love of art.
+</strong>
+</p>
+
+<p>
+Mahesh and Maitri are the Founder,
+Co-Founder and instructors behind
+Zoom Art School.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<div class="container">
+
+<div class="intro-grid">
+
+<div>
+
+<div class="kicker">
+The Story
+</div>
+
+<h2>
+Why<br>
+Zoom<br>
+Art School?
+</h2>
+
+</div>
+
+
+<div class="intro-copy">
 
 <p>
 
-Zoom Art School was built around a simple
-idea:
+Zoom Art School was created around
+a simple idea:
+
+learning art should be enjoyable,
+encouraging and accessible.
 
 </p>
 
-<p style="margin-top:20px;">
+<p>
 
-<strong>
-Art should be something people experience,
-not something they are afraid of getting wrong.
-</strong>
+Rather than treating art as something
+that has to be perfect, the school
+creates room for students to explore,
+ask questions, practise and discover
+their own creativity.
 
 </p>
 
-<p style="margin-top:20px;">
+<p>
 
-Meet Mahesh and Maitri — the founders,
-instructors and creative minds behind
-Zoom Art School.
+That philosophy runs through the
+classes, the student work and the
+community that Mahesh and Maitri
+have built.
 
 </p>
 
@@ -859,142 +789,65 @@ Zoom Art School.
 </section>
 
 
+<!-- PEOPLE -->
 
-<div class="colour-strip">
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-</div>
-
-
-
-<!-- FOUNDERS -->
-
-<section class="founders">
+<section class="people">
 
 <div class="container">
 
-<div class="founders-heading">
+<div class="people-grid">
 
-<div>
 
-<div class="kicker">
-The Founders
+<div class="person mahesh">
+
+<div class="person-number">
+01
 </div>
 
 <h2>
-Mahesh<br>
-& Maitri.
+Mahesh
 </h2>
-
-</div>
-
-<p>
-
-Two people, one shared love of art,
-learning and helping students discover
-what they are capable of creating.
-
-</p>
-
-</div>
-
-
-
-<div class="people">
-
-
-<!-- MAHESH -->
-
-<article class="person">
-
-<div class="person-image mahesh-image">
-
-<div class="person-label">
-Founder · Instructor
-</div>
-
-</div>
-
-<div class="person-content">
 
 <div class="person-role">
 Founder & Instructor
 </div>
 
-<h3>
-Mahesh
-</h3>
-
 <p>
 
-Mahesh is the founder and instructor
-at Zoom Art School, bringing together
-his passion for art and teaching to
-create an environment where students
-can learn, experiment and grow.
-
-</p>
-
-<p>
-
-His approach focuses on building strong
-fundamentals while encouraging students
-to develop their own creative voice.
+Mahesh founded Zoom Art School
+with a passion for helping students
+develop their artistic skills while
+enjoying the process of learning.
 
 </p>
 
 </div>
 
-</article>
 
+<div class="person maitri">
 
-
-<!-- MAITRI -->
-
-<article class="person">
-
-<div class="person-image maitri-image">
-
-<div class="person-label">
-Co-Founder · Instructor
+<div class="person-number">
+02
 </div>
 
-</div>
-
-<div class="person-content">
+<h2>
+Maitri
+</h2>
 
 <div class="person-role">
 Co-Founder & Instructor
 </div>
 
-<h3>
-Maitri
-</h3>
-
 <p>
 
-Maitri is the co-founder and instructor
-at Zoom Art School, helping students
-find confidence in their creativity
-and enjoy the process of making art.
-
-</p>
-
-<p>
-
-Her teaching brings patience,
-encouragement and a strong belief that
-every student has something unique
-to express.
+Maitri brings her own creative
+perspective to the school and works
+alongside Mahesh to create an
+encouraging learning environment.
 
 </p>
 
 </div>
-
-</article>
 
 
 </div>
@@ -1002,35 +855,30 @@ to express.
 </div>
 
 </section>
-
 
 
 <!-- PHILOSOPHY -->
 
 <section class="philosophy">
 
-<div class="philosophy-inner">
+<div class="container">
 
-<div class="philosophy-mark">
-“
+<div class="kicker">
+Their Philosophy
 </div>
 
 <h2>
-We don't just teach students
-how to draw.<br>
-
-We help them learn
-how to <em style="color:#e85b45;">
-see.
-</em>
+Don't just teach<br>
+students <em>what</em><br>
+to draw.
 </h2>
 
 <p>
 
-Good art education isn't only about
-technique. It is about observation,
-curiosity, confidence and the freedom
-to experiment.
+Teach them how to look,
+how to experiment,
+how to make decisions
+and how to enjoy creating.
 
 </p>
 
@@ -1039,120 +887,110 @@ to experiment.
 </section>
 
 
+<!-- VALUES -->
 
-<!-- TEACHING -->
-
-<section class="teaching">
+<section class="values">
 
 <div class="container">
 
-<div class="teaching-grid">
-
-<div>
+<div class="values-heading">
 
 <div class="kicker">
-The Zoom Art School Approach
+What Matters
 </div>
 
 <h2>
-Learn.<br>
-Explore.<br>
-Create.
+The things<br>
+behind the teaching.
 </h2>
 
 </div>
 
 
-<div class="teaching-copy">
+<div class="values-grid">
+
+
+<div class="value">
+
+<div class="value-number">
+01
+</div>
+
+<h3>
+Curiosity
+</h3>
 
 <p>
-
-A good art class should give students
-more than instructions.
-
-It should give them the confidence
-to look closely, ask questions,
-try something new and keep going
-when the first attempt doesn't work.
-
+Questions are part of learning.
+Students are encouraged to explore
+and discover.
 </p>
+
+</div>
+
+
+<div class="value">
+
+<div class="value-number">
+02
+</div>
+
+<h3>
+Practice
+</h3>
 
 <p>
-
-That's the kind of learning environment
-Mahesh and Maitri aim to create at
-Zoom Art School.
-
+Art develops through doing,
+trying again and gradually
+building confidence.
 </p>
 
-
-<div class="values">
-
-<div class="value">
-
-<strong>
-Observation
-</strong>
-
-<span>
-Learning to really look before
-putting pencil to paper.
-</span>
-
 </div>
 
 
 <div class="value">
 
-<strong>
-Fundamentals
-</strong>
+<div class="value-number">
+03
+</div>
 
-<span>
-Building skills that give creativity
-a strong foundation.
-</span>
+<h3>
+Creativity
+</h3>
+
+<p>
+Technique matters — but so does
+having the freedom to imagine
+something different.
+</p>
 
 </div>
 
 
 <div class="value">
 
-<strong>
-Experimentation
-</strong>
+<div class="value-number">
+04
+</div>
 
-<span>
-Trying ideas without worrying
-about being perfect.
-</span>
+<h3>
+Encouragement
+</h3>
+
+<p>
+Students learn best when they feel
+comfortable experimenting and
+sharing their work.
+</p>
 
 </div>
 
-
-<div class="value">
-
-<strong>
-Confidence
-</strong>
-
-<span>
-Helping every student believe
-they can create.
-</span>
-
-</div>
-
-</div>
-
-</div>
 
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- CTA -->
@@ -1168,25 +1006,22 @@ something.
 
 <p>
 
-Curious about Zoom Art School?
+The best way to understand
+Zoom Art School is to experience it.
 
-Start with a free trial class and
-experience the teaching approach
-for yourself.
+Meet Mahesh and Maitri,
+join a class and see what you can create.
 
 </p>
 
 <a href="classes.html" class="cta-button">
-Book a Free Trial →
+Book A Free Trial →
 </a>
 
 </div>
 
 </section>
 
-
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1207,15 +1042,10 @@ The Art Journal
 <div class="footer-links">
 
 <a href="index.html">Home</a>
-
 <a href="journal.html">Journal</a>
-
 <a href="gallery.html">Gallery</a>
-
 <a href="instructors.html">Mahesh & Maitri</a>
-
 <a href="classes.html">Classes</a>
-
 <a href="exhibitions/latest.html">Exhibition</a>
 
 </div>
@@ -1223,6 +1053,7 @@ The Art Journal
 </div>
 
 </footer>
+
 
 </body>
 </html>
