@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Latest Exhibition | Zoom Art School</title>
+<title>Latest Student Exhibition | Zoom Art School</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,22 +19,19 @@
 }
 
 :root {
-    --cream: #f7f0df;
-    --paper: #fffaf0;
-    --black: #171717;
-    --red: #e85b45;
-    --yellow: #f2c84b;
-    --blue: #416b91;
-    --green: #71896d;
-    --pink: #d78c8b;
-
+    --paper: #f7f1e5;
+    --ink: #171717;
+    --red: #df5b43;
+    --yellow: #f1c84b;
+    --blue: #466c91;
+    --muted: #6d675f;
     --serif: "Playfair Display", Georgia, serif;
     --sans: "DM Sans", Arial, sans-serif;
 }
 
 body {
-    background: var(--cream);
-    color: var(--black);
+    background: var(--paper);
+    color: var(--ink);
     font-family: var(--sans);
 }
 
@@ -44,626 +40,349 @@ a {
     text-decoration: none;
 }
 
-.container {
-    width: min(1400px, calc(100% - 60px));
-    margin: auto;
-}
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    background: rgba(247,241,229,.96);
     position: sticky;
     top: 0;
-    z-index: 100;
-
-    background: rgba(247,240,223,.95);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(23,23,23,.18);
+    z-index: 50;
+    backdrop-filter: blur(10px);
 }
 
 .header {
-    width: min(1400px, calc(100% - 60px));
-    min-height: 92px;
+    width: min(1380px, calc(100% - 50px));
     margin: auto;
+    min-height: 90px;
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .brand-school {
     display: block;
-
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
-
     letter-spacing: .22em;
 }
 
 .brand-journal {
     display: block;
-
-    margin-top: 8px;
-
     font-family: var(--serif);
-    font-size: 20px;
+    font-size: 21px;
+    margin-top: 5px;
 }
 
 nav {
     display: flex;
+    gap: 25px;
     align-items: center;
-    gap: 28px;
 }
 
 nav a {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
+    letter-spacing: .1em;
 }
 
 nav a:hover {
     color: var(--red);
 }
 
-.nav-button {
-    padding: 13px 18px;
 
-    background: var(--black);
-    color: white;
-}
-
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-    min-height: 700px;
+    min-height: 650px;
 
-    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    background: var(--blue);
-
-    color: white;
-
-    display: flex;
-    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,.15);
 }
 
-.hero-grid {
-    display: grid;
+.hero-copy {
+    padding: 100px 7vw;
 
-    grid-template-columns: 1fr .8fr;
-
-    gap: 90px;
-
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .kicker {
-    margin-bottom: 25px;
-
-    color: var(--yellow);
-
     font-size: 10px;
     font-weight: 700;
-
-    letter-spacing: .2em;
+    letter-spacing: .22em;
     text-transform: uppercase;
 }
 
 .hero h1 {
+    margin-top: 25px;
+
     font-family: var(--serif);
-
-    font-size: clamp(75px, 10vw, 150px);
-
+    font-size: clamp(70px, 8vw, 125px);
     font-weight: 400;
-
-    line-height: .78;
+    line-height: .8;
 
     letter-spacing: -.07em;
 }
 
 .hero h1 em {
-    color: var(--yellow);
+    color: var(--red);
 }
 
-.hero-copy {
-    max-width: 500px;
+.hero-description {
+    max-width: 550px;
 
-    color: #e4e8ec;
+    margin-top: 40px;
 
     font-size: 17px;
-
     line-height: 1.8;
+    color: var(--muted);
 }
 
-.hero-copy strong {
-    color: white;
+.hero-number {
+    margin-top: 55px;
+
+    font-family: var(--serif);
+    font-size: 70px;
+    line-height: 1;
 }
 
-.hero-button {
-    display: inline-block;
-
-    margin-top: 30px;
-
-    padding: 17px 23px;
-
+.hero-image {
+    min-height: 650px;
     background: var(--yellow);
 
-    color: var(--black);
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: .12em;
-
-    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
 }
 
-.hero-button:hover {
-    background: white;
+.hero-image img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
 }
 
 
-/* =========================
-   ABSTRACT ART
-========================= */
-
-.hero-art {
-    height: 500px;
-
-    position: relative;
-
-    background: var(--yellow);
-
-    overflow: hidden;
-}
-
-.hero-art::before {
-    content: "";
-
-    position: absolute;
-
-    width: 420px;
-    height: 420px;
-
-    border-radius: 50%;
-
-    background: var(--red);
-
-    left: -40px;
-    top: 60px;
-}
-
-.hero-art::after {
-    content: "";
-
-    position: absolute;
-
-    width: 180px;
-    height: 620px;
-
-    background: var(--green);
-
-    right: 20%;
-
-    top: -70px;
-
-    transform: rotate(22deg);
-}
-
-.art-shape {
-    position: absolute;
-
-    width: 220px;
-    height: 220px;
-
-    border-radius: 50%;
-
-    background: var(--paper);
-
-    right: 7%;
-    bottom: 8%;
-
-    z-index: 3;
-}
-
-
-/* =========================
-   INTRO
-========================= */
+/* INTRO */
 
 .intro {
-    padding: 110px 0 80px;
-}
-
-.intro-grid {
-    display: grid;
-
-    grid-template-columns: .8fr 1.2fr;
-
-    gap: 100px;
-}
-
-.intro h2 {
-    font-family: var(--serif);
-
-    font-size: clamp(55px, 7vw, 95px);
-
-    font-weight: 400;
-
-    line-height: .86;
-
-    letter-spacing: -.06em;
-}
-
-.intro-copy {
-    max-width: 650px;
-
-    color: #625d55;
-
-    font-size: 17px;
-
-    line-height: 1.9;
-}
-
-.intro-copy p + p {
-    margin-top: 25px;
-}
-
-
-/* =========================
-   EXHIBITION STATS
-========================= */
-
-.stats {
-    padding: 50px 0 100px;
-}
-
-.stat-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4,1fr);
-
-    gap: 15px;
-}
-
-.stat {
-    padding: 35px;
-
-    background: var(--paper);
-
-    min-height: 180px;
-}
-
-.stat:nth-child(1) {
-    border-top: 6px solid var(--red);
-}
-
-.stat:nth-child(2) {
-    border-top: 6px solid var(--yellow);
-}
-
-.stat:nth-child(3) {
-    border-top: 6px solid var(--blue);
-}
-
-.stat:nth-child(4) {
-    border-top: 6px solid var(--green);
-}
-
-.stat-number {
-    font-family: var(--serif);
-
-    font-size: 55px;
-
-    line-height: .8;
-}
-
-.stat-label {
-    margin-top: 20px;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: .12em;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================
-   GALLERY PREVIEW
-========================= */
-
-.preview {
-    padding: 110px 0 130px;
-
-    background: #e9dfcf;
-}
-
-.preview-heading {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: end;
-
-    gap: 40px;
-
-    margin-bottom: 55px;
-}
-
-.preview-heading h2 {
-    font-family: var(--serif);
-
-    font-size: clamp(55px, 7vw, 95px);
-
-    font-weight: 400;
-
-    line-height: .87;
-
-    letter-spacing: -.06em;
-}
-
-.preview-heading p {
-    max-width: 400px;
-
-    color: #625d55;
-
-    line-height: 1.7;
-}
-
-
-/* PHOTO GRID */
-
-.photo-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4,1fr);
-
-    grid-auto-rows: 240px;
-
-    gap: 12px;
-}
-
-.photo {
-    position: relative;
-
-    overflow: hidden;
-
-    background: var(--paper);
-}
-
-.photo:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.photo:nth-child(4) {
-    grid-column: span 2;
-}
-
-.photo-placeholder {
-    width: 100%;
-    height: 100%;
-
-    position: relative;
-}
-
-.photo:nth-child(1) .photo-placeholder {
-    background: var(--red);
-}
-
-.photo:nth-child(2) .photo-placeholder {
-    background: var(--yellow);
-}
-
-.photo:nth-child(3) .photo-placeholder {
-    background: var(--green);
-}
-
-.photo:nth-child(4) .photo-placeholder {
-    background: var(--pink);
-}
-
-.photo:nth-child(5) .photo-placeholder {
-    background: var(--blue);
-}
-
-.photo:nth-child(6) .photo-placeholder {
-    background: #b59c7c;
-}
-
-
-/* abstract placeholders */
-
-.photo-placeholder::before {
-    content: "";
-
-    position: absolute;
-
-    width: 60%;
-    height: 60%;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,.65);
-
-    left: 20%;
-    top: 20%;
-}
-
-.photo-placeholder::after {
-    content: "";
-
-    position: absolute;
-
-    width: 28%;
-    height: 85%;
-
-    background: rgba(23,23,23,.65);
-
-    left: 40%;
-    top: 8%;
-
-    transform: rotate(18deg);
-}
-
-.photo-caption {
-    position: absolute;
-
-    left: 15px;
-    bottom: 15px;
-
-    padding: 8px 10px;
-
-    background: white;
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: .08em;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================
-   FULL EXHIBITION BUTTON
-========================= */
-
-.exhibition-access {
-    margin-top: 45px;
-
-    padding: 40px;
-
-    background: var(--black);
-
-    color: white;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 30px;
-}
-
-.exhibition-access h3 {
-    font-family: var(--serif);
-
-    font-size: 38px;
-
-    font-weight: 400;
-}
-
-.exhibition-access p {
-    margin-top: 7px;
-
-    color: #bdb7ad;
-
-    font-size: 13px;
-}
-
-.access-button {
-    flex-shrink: 0;
-
-    padding: 16px 22px;
-
-    background: var(--yellow);
-
-    color: var(--black);
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: .1em;
-
-    text-transform: uppercase;
-}
-
-.access-button:hover {
-    background: white;
-}
-
-
-/* =========================
-   CLOSING
-========================= */
-
-.closing {
-    padding: 130px 0;
+    padding: 85px 0;
 
     text-align: center;
 }
 
-.closing h2 {
+.intro p {
+    max-width: 850px;
+    margin: auto;
+
     font-family: var(--serif);
+    font-size: clamp(35px, 5vw, 65px);
+    line-height: 1;
 
-    font-size: clamp(60px,8vw,120px);
-
-    font-weight: 400;
-
-    line-height: .84;
-
-    letter-spacing: -.07em;
+    letter-spacing: -.04em;
 }
 
-.closing h2 em {
-    color: var(--red);
-}
-
-.closing p {
-    max-width: 600px;
-
-    margin: 30px auto 0;
-
-    color: #625d55;
-
-    line-height: 1.8;
+.intro span {
+    color: var(--blue);
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* GALLERY */
 
-footer {
-    padding: 65px 0;
-
-    background: var(--black);
-
-    color: white;
+.gallery-section {
+    padding: 60px 0 130px;
 }
 
-.footer {
-    width: min(1400px, calc(100% - 60px));
-
+.gallery-header {
+    width: min(1380px, calc(100% - 50px));
     margin: auto;
 
     display: flex;
-
     justify-content: space-between;
+    align-items: end;
 
+    margin-bottom: 45px;
+}
+
+.gallery-title {
+    font-family: var(--serif);
+    font-size: clamp(45px, 6vw, 80px);
+    font-weight: 400;
+    line-height: .9;
+}
+
+.gallery-count {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
+
+
+/* MASONRY */
+
+.gallery {
+    width: min(1380px, calc(100% - 50px));
+    margin: auto;
+
+    columns: 4 280px;
+    column-gap: 14px;
+}
+
+.artwork {
+    break-inside: avoid;
+    margin-bottom: 14px;
+
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.artwork img {
+    width: 100%;
+    display: block;
+
+    transition: transform .45s ease;
+}
+
+.artwork:hover img {
+    transform: scale(1.035);
+}
+
+.artwork-number {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    background: white;
+    padding: 6px 9px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.artwork:hover .artwork-number {
+    opacity: 1;
+}
+
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(15,15,15,.96);
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-image {
+    max-width: 88vw;
+    max-height: 82vh;
+
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+}
+
+.previous,
+.next {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: white;
+    color: black;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.previous {
+    left: 25px;
+}
+
+.next {
+    right: 25px;
+}
+
+.download {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: var(--yellow);
+    color: black;
+
+    padding: 13px 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: .12em;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: var(--ink);
+    color: white;
+
+    padding: 70px 0;
+}
+
+.footer {
+    width: min(1380px, calc(100% - 50px));
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
     gap: 40px;
 }
 
 .footer strong {
-    display: block;
-
+    letter-spacing: .2em;
     font-size: 12px;
-
-    letter-spacing: .18em;
 }
 
 .footer span {
@@ -672,102 +391,72 @@ footer {
     margin-top: 8px;
 
     font-family: var(--serif);
-
-    font-size: 22px;
+    font-size: 23px;
 }
 
 .footer-links {
     display: flex;
-
-    gap: 25px;
-
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .footer-links a {
-    font-size: 12px;
-}
-
-.footer-links a:hover {
-    color: var(--yellow);
+    font-size: 10px;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
-@media(max-width:900px) {
+@media(max-width: 800px) {
 
-    nav a:not(.nav-button) {
+    nav {
         display: none;
     }
 
-    .hero-grid,
-    .intro-grid {
+    .hero {
         grid-template-columns: 1fr;
     }
 
-    .hero-art {
-        height: 400px;
+    .hero-image {
+        min-height: auto;
     }
 
-    .stat-grid {
-        grid-template-columns: 1fr 1fr;
+    .hero-image img {
+        height: 450px;
     }
 
-    .photo-grid {
-        grid-template-columns: 1fr 1fr;
+    .gallery {
+        columns: 2 180px;
     }
 
-    .exhibition-access {
-        flex-direction: column;
-        align-items: flex-start;
+    .previous {
+        left: 10px;
     }
+
+    .next {
+        right: 10px;
+    }
+
 }
 
-@media(max-width:560px) {
+@media(max-width: 500px) {
 
-    .container,
-    .header,
-    .footer {
+    .gallery {
+        columns: 1;
+    }
+
+    .hero-copy {
+        padding: 70px 25px;
+    }
+
+    .gallery-header {
         width: calc(100% - 30px);
     }
 
-    .hero {
-        padding: 70px 0;
+    .gallery {
+        width: calc(100% - 30px);
     }
 
-    .hero-art {
-        height: 300px;
-    }
-
-    .stat-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .photo-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 280px;
-    }
-
-    .photo:nth-child(1),
-    .photo:nth-child(4) {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .preview-heading {
-        display: block;
-    }
-
-    .preview-heading p {
-        margin-top: 25px;
-    }
-
-    .footer {
-        flex-direction: column;
-    }
 }
 
 </style>
@@ -775,8 +464,6 @@ footer {
 
 <body>
 
-
-<!-- HEADER -->
 
 <header>
 
@@ -796,21 +483,11 @@ The Art Journal
 
 <nav>
 
-<a href="../index.html">Home</a>
-
-<a href="../journal.html">Journal</a>
-
-<a href="../gallery.html">Gallery</a>
-
-<a href="../instructors.html">Mahesh & Maitri</a>
-
-<a href="../classes.html">Classes</a>
-
-<a href="latest.html" style="color:#e85b45;">Exhibition</a>
-
-<a href="../classes.html" class="nav-button">
-Book a Free Trial
-</a>
+<a href="../index.html">HOME</a>
+<a href="../journal.html">JOURNAL</a>
+<a href="../gallery.html">GALLERY</a>
+<a href="../instructors.html">MAHESH & MAITRI</a>
+<a href="../classes.html">CLASSES</a>
 
 </nav>
 
@@ -819,422 +496,126 @@ Book a Free Trial
 </header>
 
 
-
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="container">
-
-<div class="hero-grid">
-
-<div>
+<div class="hero-copy">
 
 <div class="kicker">
-Zoom Art School · Student Exhibition
+Zoom Art School · Exhibition
 </div>
 
 <h1>
-Look.<br>
-See.<br>
-<em>Celebrate.</em>
+The<br>
+Student<br>
+<em>Exhibition.</em>
 </h1>
 
-</div>
+<p class="hero-description">
 
-
-<div>
-
-<div class="hero-art">
-
-<div class="art-shape"></div>
-
-</div>
-
-<div class="hero-copy" style="margin-top:35px;">
-
-<p>
-
-<strong>
-The latest Zoom Art School exhibition.
-</strong>
+A celebration of imagination, patience,
+practice and the courage to put artwork
+out into the world.
 
 </p>
 
-<p style="margin-top:18px;">
-
-More than 200 photographs celebrating
-the work, imagination and creativity
-of our students.
-
-</p>
-
-<a href="#gallery" class="hero-button">
-Enter the Exhibition ↓
-</a>
-
+<div class="hero-number">
+2026
 </div>
 
 </div>
 
-</div>
+
+<div class="hero-image">
+
+<img src="images/EXHIBITION-001.jpg" alt="Zoom Art School Student Exhibition">
 
 </div>
 
 </section>
-
 
 
 <!-- INTRO -->
 
 <section class="intro">
 
-<div class="container">
-
-<div class="intro-grid">
-
 <div>
 
-<div class="kicker">
-The Exhibition
-</div>
-
-<h2>
-Every piece<br>
-has a story.
-</h2>
-
-</div>
-
-
-<div class="intro-copy">
-
 <p>
-
-An exhibition isn't simply a collection
-of finished drawings.
-
-It's a record of learning.
-
-Every line, colour, composition and
-creative decision represents a student
-trying something, learning something
-or discovering something new.
-
+Every drawing begins with a blank page.
+<span>Every artist begins somewhere.</span>
 </p>
-
-<p>
-
-This exhibition brings those moments
-together in one place — celebrating
-the students of Zoom Art School and
-the work they have created.
-
-</p>
-
-</div>
-
-</div>
 
 </div>
 
 </section>
 
 
+<!-- GALLERY -->
 
-<!-- STATS -->
+<section class="gallery-section">
 
-<section class="stats">
-
-<div class="container">
-
-<div class="stat-grid">
-
-<div class="stat">
-
-<div class="stat-number">
-200+
-</div>
-
-<div class="stat-label">
-Photographs
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-number">
-01
-</div>
-
-<div class="stat-label">
-Student Exhibition
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-number">
-∞
-</div>
-
-<div class="stat-label">
-Creative Possibilities
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-number">
-100%
-</div>
-
-<div class="stat-label">
-Student Creativity
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- PREVIEW -->
-
-<section class="preview" id="gallery">
-
-<div class="container">
-
-<div class="preview-heading">
+<div class="gallery-header">
 
 <div>
 
 <div class="kicker">
-A Glimpse Inside
+The Digital Exhibition
 </div>
 
-<h2>
-The latest<br>
-works.
+<h2 class="gallery-title">
+The Works
 </h2>
 
 </div>
 
-<p>
-
-These are just a few glimpses from
-the exhibition.
-
-The complete collection contains
-more than 200 photographs.
-
-</p>
-
-</div>
-
-
-
-<!-- TEMPORARY PREVIEW -->
-
-<div class="photo-grid">
-
-
-<div class="photo">
-
-<div class="photo-placeholder"></div>
-
-<div class="photo-caption">
-Exhibition · 01
+<div class="gallery-count">
+10+ WORKS · ISSUE 01
 </div>
 
 </div>
 
 
-<div class="photo">
+<div class="gallery" id="gallery"></div>
 
-<div class="photo-placeholder"></div>
-
-<div class="photo-caption">
-Student Work · 02
-</div>
-
-</div>
+</section>
 
 
-<div class="photo">
+<!-- LIGHTBOX -->
 
-<div class="photo-placeholder"></div>
+<div class="lightbox" id="lightbox">
 
-<div class="photo-caption">
-Student Work · 03
-</div>
+<button class="close" onclick="closeLightbox()">
+×
+</button>
 
-</div>
+<button class="previous" onclick="previousImage()">
+‹
+</button>
 
+<img
+id="lightboxImage"
+class="lightbox-image"
+src=""
+alt="Student artwork"
+>
 
-<div class="photo">
+<button class="next" onclick="nextImage()">
+›
+</button>
 
-<div class="photo-placeholder"></div>
-
-<div class="photo-caption">
-Exhibition · 04
-</div>
-
-</div>
-
-
-<div class="photo">
-
-<div class="photo-placeholder"></div>
-
-<div class="photo-caption">
-Student Work · 05
-</div>
-
-</div>
-
-
-<div class="photo">
-
-<div class="photo-placeholder"></div>
-
-<div class="photo-caption">
-Exhibition · 06
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<!-- ACCESS -->
-
-<div class="exhibition-access">
-
-<div>
-
-<h3>
-See all 200+ photographs.
-</h3>
-
-<p>
-Explore the complete exhibition collection
-and open individual photographs.
-</p>
-
-</div>
-
-<a href="#full-exhibition" class="access-button">
-View Complete Exhibition →
+<a
+id="downloadButton"
+class="download"
+download
+target="_blank"
+>
+DOWNLOAD IMAGE
 </a>
 
 </div>
 
-</div>
-
-</section>
-
-
-
-<!-- FULL EXHIBITION PLACEHOLDER -->
-
-<section id="full-exhibition" style="padding:100px 0;background:#fffaf0;">
-
-<div class="container" style="text-align:center;">
-
-<div class="kicker">
-Coming Next
-</div>
-
-<h2 style="
-font-family:var(--serif);
-font-size:clamp(55px,7vw,90px);
-font-weight:400;
-line-height:.9;
-letter-spacing:-.06em;
-">
-
-The complete<br>
-exhibition archive.
-
-</h2>
-
-<p style="
-max-width:600px;
-margin:30px auto 0;
-color:#625d55;
-line-height:1.8;
-">
-
-We're going to turn the 200+ photographs
-into a proper digital exhibition — with
-large images, easy browsing and the
-ability to open and save individual
-artworks.
-
-</p>
-
-<p style="
-margin-top:25px;
-font-size:11px;
-font-weight:700;
-letter-spacing:.12em;
-text-transform:uppercase;
-color:#e85b45;
-">
-
-The photographs will be added next.
-
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- CLOSING -->
-
-<section class="closing">
-
-<div class="container">
-
-<h2>
-Art deserves<br>
-to be <em>seen.</em>
-</h2>
-
-<p>
-
-Thank you to every student who shared
-their work and made this exhibition
-possible.
-
-And thank you to Mahesh and Maitri
-for creating a space where that work
-can happen.
-
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1255,16 +636,10 @@ The Art Journal
 <div class="footer-links">
 
 <a href="../index.html">Home</a>
-
 <a href="../journal.html">Journal</a>
-
 <a href="../gallery.html">Gallery</a>
-
 <a href="../instructors.html">Mahesh & Maitri</a>
-
 <a href="../classes.html">Classes</a>
-
-<a href="latest.html">Exhibition</a>
 
 </div>
 
@@ -1272,6 +647,169 @@ The Art Journal
 
 </footer>
 
+
+<script>
+
+/*
+IMPORTANT:
+Replace the filenames below with the EXACT filenames
+of your 10 exhibition photographs.
+
+They must match GitHub EXACTLY, including
+capital letters and .jpg / .png.
+*/
+
+const exhibitionImages = [
+
+"images/EXHIBITION-001.jpg",
+"images/EXHIBITION-002.jpg",
+"images/EXHIBITION-003.jpg",
+"images/EXHIBITION-004.jpg",
+"images/EXHIBITION-005.jpg",
+"images/EXHIBITION-006.jpg",
+"images/EXHIBITION-007.jpg",
+"images/EXHIBITION-008.jpg",
+"images/EXHIBITION-009.jpg",
+"images/EXHIBITION-010.png"
+
+];
+
+
+const gallery = document.getElementById("gallery");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImage =
+document.getElementById("lightboxImage");
+
+const downloadButton =
+document.getElementById("downloadButton");
+
+let currentIndex = 0;
+
+
+/* BUILD GALLERY */
+
+exhibitionImages.forEach((src, index) => {
+
+const item = document.createElement("div");
+
+item.className = "artwork";
+
+item.innerHTML = `
+
+<img src="${src}" alt="Zoom Art School student artwork">
+
+<div class="artwork-number">
+${String(index + 1).padStart(2,"0")}
+</div>
+
+`;
+
+item.addEventListener("click", () => {
+
+openLightbox(index);
+
+});
+
+gallery.appendChild(item);
+
+});
+
+
+/* OPEN */
+
+function openLightbox(index) {
+
+currentIndex = index;
+
+lightboxImage.src =
+exhibitionImages[currentIndex];
+
+downloadButton.href =
+exhibitionImages[currentIndex];
+
+lightbox.classList.add("active");
+
+}
+
+
+/* CLOSE */
+
+function closeLightbox() {
+
+lightbox.classList.remove("active");
+
+}
+
+
+/* NEXT */
+
+function nextImage() {
+
+currentIndex++;
+
+if(currentIndex >= exhibitionImages.length) {
+
+currentIndex = 0;
+
+}
+
+openLightbox(currentIndex);
+
+}
+
+
+/* PREVIOUS */
+
+function previousImage() {
+
+currentIndex--;
+
+if(currentIndex < 0) {
+
+currentIndex =
+exhibitionImages.length - 1;
+
+}
+
+openLightbox(currentIndex);
+
+}
+
+
+/* KEYBOARD */
+
+document.addEventListener("keydown", function(e) {
+
+if(!lightbox.classList.contains("active"))
+return;
+
+if(e.key === "Escape")
+closeLightbox();
+
+if(e.key === "ArrowRight")
+nextImage();
+
+if(e.key === "ArrowLeft")
+previousImage();
+
+});
+
+
+/* CLICK OUTSIDE IMAGE */
+
+lightbox.addEventListener("click", function(e) {
+
+if(e.target === lightbox) {
+
+closeLightbox();
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
