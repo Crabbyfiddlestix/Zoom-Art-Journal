@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Zoom Art School</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f8f3ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .auth-card {
+      width: 100%;
+      max-width: 430px;
+      background: white;
+      padding: 45px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-family: Georgia, serif;
+      font-size: 34px;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: 0;
+      border-radius: 8px;
+      background: #222;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 14px;
+      min-height: 20px;
+    }
+
+    .links {
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #7b4b2a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="auth-card">
+
+    <h1>Welcome Back</h1>
+
+    <p class="subtitle">
+      Sign in to your Zoom Art School Journal
+    </p>
+
+    <form id="login-form">
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Email address"
+        required
+      >
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        required
+      >
+
+      <button type="submit">
+        LOG IN
+      </button>
+
+    </form>
+
+    <div class="message" id="message"></div>
+
+    <div class="links">
+      <p>
+        <a href="register.html">New here? Create an account</a>
+      </p>
+
+      <p>
+        <a href="reset-password.html">Forgot your password?</a>
+      </p>
+
+      <p>
+        <a href="index.html">← Back to Zoom Art School</a>
+      </p>
+    </div>
+
+  </div>
+
+<script>
+
+  const SUPABASE_URL = "YOUR_SUPABASE_URL";
+  const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+
+  const { createClient } = supabase;
+
+  const client = createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  const form = document.getElementById("login-form");
+  const message = document.getElementById("message");
+
+  form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    message.textContent = "Signing you in...";
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const { data, error } = await client.auth.signInWithPassword({
+      email: email,
+      password: password
+    });
+
+    if (error) {
+      message.textContent = error.message;
+      return;
+    }
+
+    window.location.href = "journal.html";
+
+  });
+
+</script>
+
+</body>
+</html>
